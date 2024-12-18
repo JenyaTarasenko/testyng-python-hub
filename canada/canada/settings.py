@@ -2,8 +2,11 @@ import os
 import ssl
 import certifi
 from pathlib import Path
+from dotenv import load_dotenv# для паролей 
+import logging
 
-# Build paths inside the project like this: BASE_DIR / 'subdir'.
+
+
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
@@ -28,6 +31,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    
+    'django.contrib.sitemaps', # оптимизация django
     
     'construction.apps.ConstructionConfig', # app name
     
@@ -118,6 +123,9 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+
+# load_dotenv(dotenv_path='/Users/kiril/Desktop/Project_python/Canada-project/canada/.env') 
+
 os.environ['SSL_CERT_FILE'] = '/Users/kiril/Desktop/Project_python/Canada-project/venv/lib/python3.11/site-packages/certifi/cacert.pem'
 
 
@@ -128,8 +136,12 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'jenyatarasenko07@gmail.com'  # 
-EMAIL_HOST_PASSWORD = 'cbfbusvvnjblcnle'     # двухэтапный пароль
+EMAIL_HOST_USER = 'jenyatarasenko07@gmail.com' 
+
+EMAIL_HOST_PASSWORD = 'cbfbusvvnjblcnle'
+# EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD')
+
+
 
 
 

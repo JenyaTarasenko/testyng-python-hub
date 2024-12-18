@@ -1,0 +1,18 @@
+
+
+{% block content %}
+  <h1>{{ context.name }}</h1>
+  <h1>{{ context.description }}</h1>
+
+
+
+
+  
+  <!-- Добавьте ссылки на другие проекты, связанные с этой категорией, если нужно -->
+  <h2>Проекты в этой категории:</h2>
+  <ul>
+    {% comment %} {% for project in category.projects.all %}
+      <li><a href="{{ project.get_absolute_url }}">{{ project.name }}</a></li>
+    {% endfor %}
+  </ul> {% endcomment %}
+{% endblock %}

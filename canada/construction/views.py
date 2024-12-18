@@ -1,6 +1,8 @@
 from django.shortcuts import render, redirect
 from .form import ContactForm
 from django.core.mail import send_mail#розсылка
+from django.views.generic import DetailView
+from .models import Category, Project
 
 # def submith_question(request):
 #     if request.method == "POST":
@@ -50,5 +52,22 @@ def submith_question(request):
 
     else:
         form = ContactForm()  # Если метод GET, то создаем пустую форму
+        items = Category.objects.all()
+        project_item = Project.objects.all()
 
-    return render(request, 'app/index.html', {'form': form})  # Отправляем форму в шаблон        
+    return render(request, 'app/index.html', {'form': form, 'items':items, 'project_item': project_item})  # Отправляем форму в шаблон        
+
+
+
+
+class CategoryDetailView(DetailView):
+    model = Category
+    context_object_name = 'category' 
+    template_name = 'app/category_detail.html' 
+    
+    
+    
+class ProjectDetailView(DetailView):
+    model = Project
+    context_object_name = 'project' 
+    template_name = 'app/project_detail.html' 

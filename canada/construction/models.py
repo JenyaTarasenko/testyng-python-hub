@@ -1,8 +1,15 @@
 from django.db import models
+from django.urls import reverse
+
 
 class Category(models.Model):
     name = models.CharField(max_length=200, verbose_name='Название категории проекта')
     slug = models.SlugField(max_length=200, unique=True, verbose_name="URL-адрес категории")
+    description = models.TextField(verbose_name="Описание категории", blank=True, null=True)
+    
+    def get_absolute_url(self):
+      return reverse('category_detail', args=[self.slug])
+
     
     class Meta:
         ordering = ['name']
@@ -24,6 +31,11 @@ class Project(models.Model):
     image = models.ImageField(upload_to='projects/images/', verbose_name='Фото проекта', blank=True, null=True) 
     video = models.FileField(upload_to='projects/videos/', verbose_name='Видео проета', blank=True, null=True) 
     youtube_url_video = models.URLField(verbose_name='YouTube видео', blank=True, null=True)
+    
+    
+    def get_absolute_url(self):
+         return reverse("project_detail", kwargs=[self.slug])
+    
     
     
     class Meta:

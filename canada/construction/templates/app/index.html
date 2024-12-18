@@ -4,8 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Контактная форма</title>
+
 </head>
 <body>
+    <h3>Категории</h3>
+    {% for projects in items %}
+        <a href="{% url 'construction:category_detail' projects.slug %}">
+            <p>{{ projects.name }}</p>
+        </a>
+        
+            <p>{{ projects.description }}</p>
+        
+        
+    {% endfor %}
+    <h5>Project</h5>
+    
+    {% for new in project_item %}
+        <a href="{% url 'construction:project_detail' new.slug %}"><p>{{new.name }}</p></a>
+        <p>{{new.description }}</p>
+
+    {% endfor %}
+
+   
+    
     <h1>Index html</h1>
     <form method="post">
         {% csrf_token %}
