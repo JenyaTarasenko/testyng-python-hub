@@ -1,0 +1,81 @@
+ {% load static%}  
+   
+   <!--  секция главный form -->
+    <section class="form">
+        <div class="conteiner-form">
+
+            <div class="form-row-right">
+
+                <!--  текст на мобильн версии -->
+                <div class="text-form-top-mobile">
+                    <h5>Get a <span style="color:#E77B2D;">FREE</span>Consultation</h5>
+                </div>
+                <!--  текст на мобильн версии -->
+
+                <form method="post" class="form-style">
+                    {% csrf_token %}
+                    <input type="text" name="name" class="form-field" placeholder="Full Name">
+                    <input type="text" name="number" class="form-field" placeholder="Phone Number">
+                    <input type="text" name="comment" class="form-field large-field" placeholder="Your Comment">
+                    {% comment %} <button type="submit" class="home-btn">Send Message</button> {% endcomment %}
+                    <div class="form-row-left">
+                        
+                        <!--  текст на мобильн версии -->
+                        <div class="text-service__block-mobile">
+                            <div class="text-block_item-mobile">
+                                <p>Leave your contact information<br>& we'll call you back</p>
+                            </div>
+                        </div>
+                        <!--  текст на мобильн версии -->
+
+                        <h5>Get a <span style="color:#E77B2D;">FREE</span><br>Consultation</h5>
+                        <button type="submit" class="home-btn">send message</button>
+
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </section>
+    <!--  секция главный form -->
+
+
+    <section class="form">
+        <div class="conteiner-form">
+
+            <div class="form-row-right">
+
+                <!--  текст на мобильн версии -->
+                <div class="text-form-top-mobile">
+                    <h5>Get a <span style="color:#E77B2D;">FREE</span>Consultation</h5>
+                </div>
+                <!--  текст на мобильн версии -->
+
+                <div class="form-row">
+                    <input type="text" class="form-field" placeholder="Full Name">
+                    <input type="text" class="form-field" placeholder="Phone number">
+                </div>
+                <div class="form-row">
+                    <input type="text" class="form-field large-field" placeholder="Your Comment">
+                </div>
+            </div>
+
+            <div class="form-row-left">
+                
+                <!--  текст на мобильн версии -->
+                <div class="text-service__block-mobile">
+                    <div class="text-block_item-mobile">
+                        <p>Leave your contact information<br>& we'll call you back</p>
+                    </div>
+                </div>
+                <!--  текст на мобильн версии -->
+
+                <h5>Get a <span style="color:#E77B2D;">FREE</span><br>Consultation</h5>
+                <button class="home-btn">send message</button>
+            </div>
+
+
+        </div>
+
+
+    </section>

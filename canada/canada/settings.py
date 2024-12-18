@@ -2,7 +2,7 @@ import os
 import ssl
 import certifi
 from pathlib import Path
-from dotenv import load_dotenv# для паролей 
+from dotenv import load_dotenv
 import logging
 
 
@@ -140,6 +140,18 @@ EMAIL_HOST_USER = 'jenyatarasenko07@gmail.com'
 
 EMAIL_HOST_PASSWORD = 'cbfbusvvnjblcnle'
 # EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD')
+
+
+
+STATIC_URL = '/static/'
+STATIC_DIR = os.path.join(BASE_DIR, 'static')
+STATICFILES_DIRS = [STATIC_DIR]
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+# Медиафайлы
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 
 

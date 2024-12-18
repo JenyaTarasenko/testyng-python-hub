@@ -52,10 +52,10 @@ def submith_question(request):
 
     else:
         form = ContactForm()  # Если метод GET, то создаем пустую форму
-        items = Category.objects.all()
-        project_item = Project.objects.all()
+        # items = Category.objects.all()
+        # project_item = Project.objects.all()
 
-    return render(request, 'app/index.html', {'form': form, 'items':items, 'project_item': project_item})  # Отправляем форму в шаблон        
+    return render(request, 'app/index.html', {'form': form})  # Отправляем форму в шаблон        
 
 
 
