@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="{% static './style.css' %}"/>
+    <link rel="stylesheet" href="{% static './media.css' %}"/>
+    <title>Canada</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+    {% include 'include/menu/menu.html' %}
+    <!--  first-service -->
+    <section class="service">
+        <div class="service-image__conteiner"></div>
+
+    </section>
+    <!--  first-service -->
+
+    <!--  текст блочный -->
+    <section class="text-detail">
+        <div class="detail-text-service__block">
+          <div class="detail-text-block">
+              <h4>Showroom</h4>
+          </div>
+          <div class="detail-text-block_item">
+            <p>areas what we serv</p>
+        </div>
+        </div>
+    </section>
+    <!--  текст блочный -->
+
+    <section class="service-block">
+        <div class="service-block__conteiner">
+            <!--  image -->
+            <div class="service-block_image">
+                <img src="{% static './image/detail-service2.png' %}" alt="">
+            </div>
+            <!--  image -->
+
+
+            <!--  text -->
+            <div class="service-block__conteiner-text">
+                <div class="service-block-items">
+                    <h1>basement renovations</h1>
+                </div>
+                <div class="service-block-description">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus ex perferendis nisi amet aut, odio vel, placeat at deleniti consequuntur veniam facere ab ipsam porro, explicabo quis saepe. Quae, alias?</p>
+                </div>
+                <div class="service-block-app">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus ex perferendis nisi amet aut, odio vel, placeat at deleniti consequuntur veniam facere ab ipsam porro, explicabo quis saepe. Quae, alias?</p>
+                </div>
+
+                <div class="service-block-text-decoration">
+                    <p>Lorem ipsum dolor sit amet</p>
+                    <p>Lorem ipsum dolor sit amet</p>
+                </div>
+            </div>
+            <!--  text -->
+        </div>
+    </section>
+
+  
+
+    <section class="service-block-top">
+        <div class="service-block__conteiner-top">
+
+            <!--  text -->
+            <div class="service-block__conteiner-text-top">
+                <div class="service-block-items-top">
+                    <h2>basement renovations</h2>
+                </div>
+                <div class="service-block-description-top">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus ex perferendis nisi amet aut, odio vel, placeat at deleniti consequuntur veniam facere ab ipsam porro, explicabo quis saepe. Quae, alias?</p>
+                </div>
+                <div class="service-block-app-top">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus ex perferendis nisi amet aut, odio vel, placeat at deleniti consequuntur veniam facere ab ipsam porro, explicabo quis saepe. Quae, alias?</p>
+                </div>
+
+                <div class="service-block-text-decoration-top">
+                    <p>Lorem ipsum dolor sit amet</p>
+                    <p>Lorem ipsum dolor sit amet</p>
+                </div>
+            </div>
+            <!--  text -->
+
+             <!--  image -->
+            <div class="service-block_image-top">
+                <img src="{% static './image/detail-service3.png' %}" alt="">
+            </div>
+            <!--  image -->
+        </div>
+    </section>
+
+    {% include 'include/footer/footer.html' %}
+
+    
+    
+
+    <!--  bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <!--  bootstrap -->
+  
+</body>
+
+</html>    
