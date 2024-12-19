@@ -131,7 +131,7 @@ html,body {
 
 .home-image {
 
-    background-image: url(./image/showroom-2.png);
+    background-image: url(./image/home-section.png);
     width: 100%;
     height: 700px;
     display: flex;
@@ -248,7 +248,7 @@ html,body {
 
 .urban-image {
 
-    background-image: url(./image/showroom-1.png);
+    background-image: url(./image/about-section.png);
     width: 100%;
     height: 700px;
     display: flex;
@@ -257,6 +257,17 @@ html,body {
     background-size: cover;
     background-position: center;
 }
+
+/* .urban-image-about {
+
+    background-image: url(./image/About\ us.png);
+    width: 121px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    background-size: cover;
+
+} */
 /* mobile version */
 
 .urban-color-image {
@@ -758,8 +769,11 @@ html,body {
     border-radius: 30px;
     font-size: 16px;
     background-color: #7EA2B0;
+   
 
 }
+
+
 .large-field {
 
     width: 778px;
@@ -844,11 +858,9 @@ input::placeholder {
     
     display: flex;
     flex-direction: column;
-    max-width: 450px;
     margin-left: 700px;
+    text-transform: uppercase;
    
-
-
 
 }
 .footer-tel {

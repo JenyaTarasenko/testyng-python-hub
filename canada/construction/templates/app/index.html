@@ -61,10 +61,10 @@
     <!--  секция главный urban -->
     <section class="urban">
         <div class="urban-image">
-            <div class="navigator-about">
-                <img src="">
-            </div>
             <div class="urban-color-image">
+                {% comment %} <div class="urban-image-about"></div> {% endcomment %}
+                                                   
+                
                 <div class="urban-conteiner">
                     <div class="urban-title">
                         <h3>Urban Basement Solution</h3>
@@ -81,6 +81,8 @@
             </div>
             
         </div>
+
+        <!--  planshet urban -->
         <div class="urban-planshet">
             <div class="urban-conteiner-mobile">
                 <div class="urban-title">
@@ -188,7 +190,7 @@
             <div class="showroom-conteiner_card">
 
                 <!--  card -->
-                <div class="showroom-card" style="background-image:url(/FRONT/image/showroom-2.png);">
+                <div class="showroom-card" style="background-image:url({% static '/image/showroom-2.png' %});">
                     <div class="card-conteiner">
                         <div class="showroom-item">
                             <h5>Heading</h5>
@@ -201,7 +203,7 @@
                 <!--  card -->
 
                 <!--  card -->
-                <div class="showroom-card" style="background-image:url(/FRONT/image/showroom-3.png);">
+                <div class="showroom-card" style="background-image:url({% static '/image/showroom-3.png' %});">
                     <div class="card-conteiner">
                         <div class="showroom-item">
                             <h5>Heading</h5>
@@ -217,7 +219,7 @@
                 <!--  card -->
 
                 <!--  card -->
-                <div class="showroom-card" style="background-image:url(/FRONT/image/showroom-4.png);">
+                <div class="showroom-card" style="background-image:url({% static 'image/showroom-4.png' %});">
                     <div class="card-conteiner">
                         <div class="showroom-item">
                             <h5>Heading</h5>

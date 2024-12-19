@@ -49,6 +49,7 @@
         width: 380px;
         height: 70px;
     }
+    
     .form-row-left h5 {
         display: none;
     }  
@@ -257,7 +258,7 @@
     }
     .footer-image {
 
-        background-image: url(/FRONT/image/footer-mobile2.png);
+        background-image: url(./image/footer-mob.png);
         width: 100%;
         height: 830px;
 
@@ -272,7 +273,7 @@
     } 
     .home-image {
 
-        background-image: url(/FRONT/image/home-planshet.png);
+        background-image: url(./image/home-section.png);
         width: 100%;
         height: 820px;
 
@@ -293,7 +294,7 @@
     }
     .urban-image {
 
-        background-image: url(/FRONT/image/urban-planshet.png);
+        background-image: url(./image/about-section.png);
         width: 100%;
         height: 820px;
         display: flex;
