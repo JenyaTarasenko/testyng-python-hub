@@ -1,33 +1,11 @@
+from typing import Any
 from django.shortcuts import render, redirect
 from .form import ContactForm
 from django.core.mail import send_mail#розсылка
 from django.views.generic import DetailView
 from .models import Category, Project
 
-# def submith_question(request):
-#     if request.method == "POST":
-#         form =ContactForm(request.POST)
-#         if form.is_valid():
-#             form.save()
-            
-            
-#             name = form.cleaned_data['name']  
-#             number = form.cleaned_data['number']  
-#             comment = form.cleaned_data['comment']  
-            
-#             send_mail(
-                
-#                 subject=f'Новое сообщение от {name}', 
-#                 message=f'Получено новое сообщение от {name} ({number}):\n\n{comment}', 
-#                 from_email='jenyatarasenko07@gmail.com',  
-#                 recipient_list=['jenyatarasenko07@gmail.com'], 
-#                 fail_silently=False,
-#             )
-#             return redirect('construction:index') 
-#     else:
-#         form = ContactForm()
-#     return render(request, 'app/index.html', {'form':form})    
-        
+
 
 def submith_question(request):
     if request.method == "POST":
@@ -52,10 +30,10 @@ def submith_question(request):
 
     else:
         form = ContactForm()  # Если метод GET, то создаем пустую форму
-        # items = Category.objects.all()
-        # project_item = Project.objects.all()
+        items = Category.objects.all()
+        project_item = Project.objects.all()
 
-    return render(request, 'app/index.html', {'form': form})  # Отправляем форму в шаблон        
+    return render(request, 'app/pages/index.html', {'form': form, 'items':items, 'project_item':project_item})  # Отправляем форму в шаблон        
 
 
 
@@ -64,6 +42,9 @@ class CategoryDetailView(DetailView):
     model = Category
     context_object_name = 'category' 
     template_name = 'app/category_detail.html' 
+    
+   
+    
     
     
     

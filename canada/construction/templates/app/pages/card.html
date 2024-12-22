@@ -1,0 +1,267 @@
+{% extends "app/base.html" %}
+{% load static %}
+{% block title %}Canada page card{% endblock %}
+{% block content %}
+        <!--  first-detail -->
+    <section class="detail">
+        <div class="detail-image__conteiner"></div>
+    </section>
+      <!--  first-detail -->
+
+    
+    
+      <!--  текст блочный -->
+    <section class="text-detail">
+        <div class="detail-text-service__block">
+          <div class="detail-text-block">
+              <h4>Showroom</h4>
+          </div>
+          <div class="detail-text-block_item">
+            <p>areas what we serv</p>
+        </div>
+        </div>
+    </section>
+      <!--  текст блочный -->
+
+      <!-- секция card -->
+    <section class="detail-card">
+        <div class="card-conteiner-items">
+
+          <!-- карта -->
+          <div class="card-detail__conteiner">
+            <div class="detail-image_card">
+              <img src="{% static './image/showroom-2.png' %}" alt="">
+            </div>
+            <img src="{% static '/image/down-line.png' %}" alt="Круг" class="circle"> <!-- Картинка круга -->
+            <div class="detail-text_card">
+              <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, obcaecati? Ducimus doloribus ullam </h4>
+            </div>
+            <div class="detail-text_card-description">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+
+          </div>
+          <!-- карта -->
+
+          <!-- карта -->
+          <div class="card-detail__conteiner">
+            <div class="detail-image_card">
+              <img src="{% static './image/showroom-1.png' %}" alt="">
+            </div>
+            <img src="{% static '/image/down-line.png' %}" alt="Круг" class="circle"> <!-- Картинка круга -->
+            <div class="detail-text_card">
+              <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, obcaecati?</h4>
+            </div>
+            <div class="detail-text_card-description">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+            </div>
+
+          </div>
+          <!-- карта -->
+
+          <!-- карта -->
+          <div class="card-detail__conteiner">
+            <div class="detail-image_card">
+              <img src="{% static './image/showroom-3.png' %}" alt="">
+            </div>
+            <img src="{% static '/image/down-line.png' %}" alt="Круг" class="circle"> <!-- Картинка круга -->
+            <div class="detail-text_card">
+              <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, obcaecati?</h4>
+            </div>
+            <div class="detail-text_card-description">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+
+          </div>
+          <!-- карта -->
+
+          <!-- карта -->
+          <div class="card-detail__conteiner">
+            <div class="detail-image_card">
+              <img src="{% static './image/showroom-1.png' %}" alt="">
+            </div>
+            <img src="{% static '/image/down-line.png' %}" alt="Круг" class="circle"> <!-- Картинка круга -->
+            <div class="detail-text_card">
+              <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, obcaecati?</h4>
+            </div>
+            <div class="detail-text_card-description">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+
+          </div>
+          <!-- карта -->
+
+          <!-- карта -->
+          <div class="card-detail__conteiner">
+            <div class="detail-image_card">
+              <img src="{% static './image/showroom-1.png' %}" alt="">
+            </div>
+            <img src="{% static '/image/down-line.png' %}" alt="Круг" class="circle"> <!-- Картинка круга -->
+            <div class="detail-text_card">
+              <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, obcaecati? </h4>
+            </div>
+            <div class="detail-text_card-description">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+
+          </div>
+          <!-- карта -->
+
+          <!-- карта -->
+          <div class="card-detail__conteiner">
+            <div class="detail-image_card">
+              <img src="{% static './image/showroom-1.png' %}" alt="">
+            </div>
+            <img src="{% static '/image/down-line.png' %}" alt="Круг" class="circle"> <!-- Картинка круга -->
+            <div class="detail-text_card">
+              <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h4>
+            </div>
+            <div class="detail-text_card-description">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus .</p>
+            </div>
+
+          </div>
+          <!-- карта -->
+
+        </div>
+    </section>
+    <!-- секция card -->
+    
+    
+
+    <section class="slider-card"> 
+        <div id="cardSlider" class="carousel slide" data-bs-ride="carousel">
+          <!-- Индикаторы (опционально) -->
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#cardSlider" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#cardSlider" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#cardSlider" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          </div>
+      
+          <!-- Слайды -->
+          <div class="carousel-inner">
+            <!-- Первый слайд -->
+            <div class="carousel-item active">
+              <div class="card-conteiner-items">
+                <div class="card-detail__conteiner">
+                  <div class="detail-image_card">
+                    <img src="{% static './image/showroom-3.png' %}" alt="">
+                  </div>
+                  <img src="{% static './image/down-line.png' %}" alt="Круг" class="circle">
+                  <div class="detail-text_card">
+                    <h4>Lorem ipsum dolor sit amet </h4>
+                  </div>
+                  <div class="detail-text_card-description">
+                    <p>Lorem ipsum dolor sit amet consectetur</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+      
+            <!-- Второй слайд -->
+            <div class="carousel-item">
+              <div class="card-conteiner-items">
+                <div class="card-detail__conteiner">
+                  <div class="detail-image_card">
+                    <img src="{% static './image/showroom-3.png' %}" alt="">
+                  </div>
+                  <img src="{% static './image/down-line.png' %}" alt="Круг" class="circle">
+                  <div class="detail-text_card">
+                    <h4>Lorem ipsum dolor sit </h4>
+                  </div>
+                  <div class="detail-text_card-description">
+                    <p>Lorem ipsum dolor sit amet consectetur </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+      
+            <!-- Третий слайд -->
+            <div class="carousel-item">
+              <div class="card-conteiner-items">
+                <div class="card-detail__conteiner">
+                  <div class="detail-image_card">
+                    <img src="{% static './image/showroom-3.png' %}" alt="">
+                  </div>
+                  <img src="{% static './image/down-line.png' %}" alt="Круг" class="circle">
+                  <div class="detail-text_card">
+                    <h4>Lorem ipsum dolor sit amet</h4>
+                  </div>
+                  <div class="detail-text_card-description">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      
+          <!-- Управляющие кнопки -->
+          <button class="carousel-control-prev" type="button" data-bs-target="#cardSlider" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Предыдущий</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#cardSlider" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Следующий</span>
+          </button>
+        </div>
+    </section>  
+      
+  
+    
+ 
+
+
+   <!-- секция картинка -->
+  <section class="new-detail">
+    <div class="new-detail_conteiner">
+
+      <!--  текст блочный -->
+      <div class="detail-text-service__block">
+        <div class="detail-text-block">
+            <h4>Showroom</h4>
+        </div>
+        <div class="detail-text-block_item">
+          <p>areas what we serv</p>
+      </div>
+      
+   
+      <!--  текст блочный -->
+
+      <div class="new-detail_image">
+        
+      </div>
+      <div class="new-detail_text">
+        <h3>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium своєї компанії в інтернеті. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium своєї компанії в інтернеті. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium своєї компанії в інтернеті.</h3>
+
+      </div>
+
+    </div>
+  </section>
+  <!-- секция картинка -->
+
+     <!-- секция картинка -->
+  <section class="new-detail">
+      <div class="new-detail_conteiner new-detail-two">
+  
+        <div class="detail-text-service__block">
+          <div class="detail-text-block">
+              <h4>Showroom</h4>
+          </div>
+          <div class="detail-text-block_item">
+            <p>areas what we serv</p>
+        </div>
+        
+        <div class="new-detail_image">
+          
+        </div>
+        <div class="new-detail_text">
+          <h3>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium своєї компанії в інтернеті. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium своєї компанії в інтернеті. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium своєї компанії в інтернеті.</h3>
+  
+        </div>
+  
+      </div>
+  </section>
+    <!-- секция картинка -->
+
+  {% endblock%} 
