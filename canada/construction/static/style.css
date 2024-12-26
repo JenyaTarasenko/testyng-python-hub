@@ -18,7 +18,7 @@ a {
 } */
 html,body {
    
-    font-family: 'MursGothic', 'Raleway', 'Inter', sans-serif;
+    font-family: 'Montserrat',"Inter", sans-serif;
     font-size: 16px; 
     color: #CCC5B9; 
     min-width: 320px; 
@@ -42,10 +42,14 @@ html,body {
     justify-content: space-between;
     background-color: #282E33;
     height: 100px;
-    padding: 30px;
+    padding: 0 70px;
     align-items: center;
 }
+.top-header_items img {
 
+    width: 35px;
+    height: 35px;
+}
 .top-header_logo {
 
     margin-top: 30px;
@@ -58,13 +62,23 @@ html,body {
     flex-direction: row;
     align-items: center;
     gap: 20px;
+    
 
+}
+.top-header_telephone img {
+
+    width: 40px;
+    height: 40px;
 }
 .telephone-header {
 
-    font-size: 35px;
+    font-size: 30px;
     text-decoration: none;
     color:#E9EBEB;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    letter-spacing: 1px;
+
 
 }
 .telephone-header:hover {
@@ -92,6 +106,13 @@ html,body {
 }
 
 /* меню линии */
+.navbar-nav,
+.nav-item {
+
+    font-family: 'Montserrat', sans-serif !important;
+    font-weight: 700; 
+    font-size:18px; 
+}
 
 
 /* меню  bootstrap  убрать обводку */
@@ -159,6 +180,7 @@ html,body {
     margin-left: 150px;
     text-align: left;
     padding: 40px;
+    margin-top: 90px;
     
 }
 
@@ -203,9 +225,10 @@ html,body {
     font-weight: 900;
     font-size: 18px;
     line-height: 30px;
-    letter-spacing: 20%;
+    letter-spacing: 2px;
     color:#E77B2D;
     text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
 }
 .home-description h1 {
 
@@ -213,6 +236,8 @@ html,body {
     font-size: 55px;
     line-height: 55px;
     color: #282E33;
+    font-family: 'Montserrat', sans-serif;
+
 
 
 }
@@ -222,8 +247,8 @@ html,body {
 
     font-weight: 700;
     font-size: 23px;
-    opacity: 60%;
-    color: #282E3399;
+    color:rgba(40, 46, 51, 0.6);
+    font-family: 'Montserrat', sans-serif;
 
 
 }
@@ -311,7 +336,7 @@ html,body {
     gap: 20px;
     justify-content: center;
     max-width: 450px;
-    margin-left: 150px;
+    margin-left: 50px;
     padding: 20px;
     margin-top: 70px;
     
@@ -326,6 +351,7 @@ html,body {
     font-size: 55px;
     line-height: 55px;
     color: #282E33;
+    font-family: 'Montserrat', sans-serif;
 
 
 }
@@ -339,8 +365,8 @@ html,body {
 
     font-weight: 700;
     font-size: 23px;
-
-    color: #282E3399;
+    color:rgba(40, 46, 51, 0.6);
+    font-family: 'Montserrat', sans-serif;
 
 
 }
@@ -375,6 +401,7 @@ html,body {
     align-items: center;
     background-size: cover;
     background-position: center;
+    margin-top: 20px;
 
 
 }
@@ -386,7 +413,7 @@ html,body {
     text-align: center;
     flex-direction: column;
     gap: 10px;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 .text-block h4 {
@@ -394,8 +421,9 @@ html,body {
 
     font-weight: 900;
     font-size: 55px;
-    line-height: 55px;
+    line-height: 30px;
     color: #282E33;
+    font-family: 'Montserrat', sans-serif;
 
 }
 .text-block_item p{
@@ -405,7 +433,9 @@ html,body {
     font-size: 18px;
     color: #282E3399;
     text-transform: uppercase;
-    opacity: 60%;
+    font-family: 'Montserrat', sans-serif;
+
+  
 
 }
 /* section text */
@@ -438,6 +468,7 @@ html,body {
     color: #FAFAFF;
     margin-left: 30px;
     margin-top: 30px;
+    font-family: "Inter", sans-serif;
 
 
 }
@@ -474,7 +505,7 @@ html,body {
 .service-card_description {
 
     display: flex;
-    text-align: center;
+    text-align: left;
     max-width: 220px;
     max-height: 105px;
 
@@ -507,6 +538,8 @@ html,body {
     letter-spacing: 5px;
     text-transform: uppercase;
     margin-top: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
 
 
 }
@@ -584,6 +617,8 @@ html,body {
 
     font-weight: 900;
     font-size: 23px;
+    font-family: "Inter", sans-serif;
+
 }
 
 .showroom-description p{
@@ -591,8 +626,9 @@ html,body {
     font-weight: 400;
     font-size: 18px;
     line-height: 20px;
-    letter-spacing: 5%;
+    letter-spacing: 0.5px;
     color: #282E33;
+    font-family: "Inter", sans-serif;
 
    
 
@@ -678,6 +714,8 @@ html,body {
     line-height: 20px;
     letter-spacing: 1px;
     color: #2E3F7F;
+    font-family: "Inter", sans-serif;
+
 }
 
 /* ---------------------reviews--------------*/
@@ -710,6 +748,7 @@ html,body {
 
     font-size: 30px;
     font-weight: 900;
+    font-family: 'Montserrat', sans-serif;
 
 }
 .conteiner-form {
@@ -738,6 +777,7 @@ html,body {
     font-size: 18px;
     color: #282E3399;
     text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
  
 
 }
@@ -1077,6 +1117,8 @@ input::placeholder {
     font-size: 55px;
     line-height: 55px;
     color: #282E33;
+    font-family: 'Montserrat', sans-serif;
+
 }
 
 
@@ -1253,6 +1295,7 @@ input::placeholder {
     font-weight: 900;
     font-size: 35px;
     color:#282E33;
+    font-family: "Inter", sans-serif; 
 }
 .substrate-mobile-item img {
 
@@ -1272,7 +1315,9 @@ input::placeholder {
 .substrate-mobile-description p {
 
     font-size: 28px;
-    font-weight: 300;
+    font-weight: 200;
+    font-family: "Inter", sans-serif;
+    color: #FFFFFF;
 }
 .substrate-mobile-line {
 
@@ -1315,7 +1360,7 @@ input::placeholder {
     justify-content: center;
     align-items: center;
     flex-direction: row;
-    gap:20px;
+    gap:60px;
 
 }
 .new-page-text {
@@ -1323,7 +1368,7 @@ input::placeholder {
     display: flex;
     justify-content: center;
     align-items: center;
-    justify-content: center;
+   
 }
 .new-page-text p{
 
@@ -1347,14 +1392,17 @@ input::placeholder {
     font-weight: 900;
     font-size: 23px;
     color:#282E33;
+    font-family: 'Inter', sans-serif;
 
 }
 .substrate-conteiner-items p {
 
-    font-weight: 400;
+    font-weight: 300;
     font-size: 18px;
     line-height: 20px;
     color:#FFFFFF;
+    font-family: 'Inter', sans-serif;
+    letter-spacing: 0.7px;
 }
 .substrate-conteiner-card img {
 
@@ -1380,7 +1428,7 @@ input::placeholder {
     display: flex;
     flex-direction: row;
     margin-top: 200px;
-    padding: 40px;
+    /* padding: 40px; */
 
     justify-content: center;
     gap: 50px;
@@ -1402,8 +1450,10 @@ input::placeholder {
 .new-page-text-items h1 {
 
     font-weight: 900;
-    font-size: 90px;
+    font-size: 80px;
     color:#282E33;
+    font-family: 'Montserrat', sans-serif;
+    
 
 }
 .new-item p {
@@ -1412,6 +1462,7 @@ input::placeholder {
     font-size: 25px;
     color:#282E3399;
     opacity: 80%;
+    font-family: 'Montserrat', sans-serif;
 }
 
 /* -  new-page-text-- */
@@ -1429,6 +1480,7 @@ input::placeholder {
     flex-direction: row;
     position: relative;
     gap: 30px;
+    margin-bottom: 30px;
 }
 .conteiner-avatar {
 
@@ -1570,8 +1622,9 @@ input::placeholder {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 900px;
+    height: 500px;
     flex-direction: column;
+    gap:50px;
 
 
 }
@@ -1589,6 +1642,26 @@ input::placeholder {
     height: 100%;
     border: none;
 }
+.text-service__block-video {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+
+
+}
+.text-block_item-video p {
+    font-weight: 900;
+    font-size: 18px;
+    color: #282E3399;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+
+
+
+}
+
 /* --   video-content -- */
 /* ---------------------NEW-PAGE.HTML--------------*/
 
@@ -1647,6 +1720,8 @@ input::placeholder {
     font-size: 55px;
     font-weight: 900;
     line-height: 55px;
+    font-family: 'Montserrat', sans-serif; 
+
 
 
 }
@@ -1666,14 +1741,17 @@ input::placeholder {
     color:#282E33;
     /* margin-top: 100px; */
     letter-spacing: 1px;
+    font-family: 'Montserrat', sans-serif;
+
 }
 .service-block-items {
 
     display: flex;
     text-align: left;
     padding: 0 30px;
-    margin-bottom: 60px;
+    /* margin-bottom: 60px; */
     max-width: 400px;
+    
 }
 
 
@@ -1692,6 +1770,12 @@ input::placeholder {
     justify-content: center;
     align-items: center;
     flex-direction: row;
+}
+.service-block-app,
+.service-block-description p{
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
 }
 
 .service-block_image-top img{
@@ -1742,6 +1826,7 @@ input::placeholder {
     color:#282E33;
     /* margin-top: 100px; */
     letter-spacing: 1px;
+  
 }
 .service-block-items-top {
 
@@ -1755,3 +1840,5 @@ input::placeholder {
 /*  SECTION service-title */
 
 /* ---------------------SERVICE-PAGE.HTML--------------*/
+/* font-family: "Inter", sans-serif; */
+/* font-family: 'Montserrat', sans-serif; */

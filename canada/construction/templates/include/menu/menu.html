@@ -38,16 +38,16 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav mx-auto"> <!-- Центрируем пункты меню -->
             <li class="nav-item">
-                <a class="nav-link active" href="{% url 'construction:index' %}">Home</a>
+                <a class="nav-link {% if request.path == '/' %}active{% endif %}" href="{% url 'construction:index' %}">Home</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{% url 'construction:about' %}">About Us</a>
+                <a class="nav-link {% if request.path == '/about/' %}active{% endif %}" href="{% url 'construction:about' %}">About Us</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{% url 'construction:detail' %}">Services</a>
+                <a class="nav-link {% if request.path == '/detail/' %}active{% endif %}" href="{% url 'construction:detail' %}">About Us</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{% url 'construction:card' %}">Showroom</a>
+                <a class="nav-link {% if request.path == '/card/' %}active{% endif %}" href="{% url 'construction:card' %}">Card</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="{% url 'construction:test' %}">Cost</a>
