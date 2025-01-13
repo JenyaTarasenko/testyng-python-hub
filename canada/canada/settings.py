@@ -154,6 +154,13 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 
+####### telegram-bot ######
+TELEGRAM_BOT_TOKEN = "7515498927:AAFmVre9UZruTG6dn2edZCSnENU_hL2GaHU"
+TELEGRAM_CHAT_ID = 530704410
+####### telegram-bot ######
+
+
+
 
 
 
