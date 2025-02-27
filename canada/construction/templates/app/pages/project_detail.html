@@ -1,9 +1,167 @@
+{% extends "app/base.html" %}
+{% load static %}
+{% block title %}Canada page card{% endblock %}
 {% block content %}
 
- <h1>Project detail page</h1>
+    <section class="detail">
+        <div class="detail-image__conteiner"></div>
+    </section>
 
-    <h1>{{ project.name }}</h1>
-    <h2>{{ project.description }}</h2>
-    <h2>Проекты в этой категории:{{ project.name }}</h2>
-  
+    <div class="detail-text-service__block">
+        <div class="detail-text-block">
+            <h4>{{project.name}}</h4>
+        </div>
+        <div class="detail-text-block_item">
+          <p>areas what we serv</p>
+    </div>
+    
+    <section class="responsive-section">
+        <div class="container-section">
+            <div class="image-container">
+                <img src="{{ project.image.url }}" alt="Image" class="img-fluid"  style="border-radius: 20px 0 20px 0;">
+            </div>
+            <div class="text-container">
+                <p>{{ project.description }}</p>
+            </div>
+    </section>
+    <!--  new-page-style -->
+    <section class="new-style">
+        <div class="new-style-man">
+        
+            <!--  аватарка -->
+            <div class="new-style-avatar-conteiner">
+
+                <div class="conteiner-avatar">
+                    <div class="new-style-avatar">
+                        <img src="{%  static './image/about-face.png' %}" alt="man">
+                    </div>
+                    <div class="new-style-social">
+                        <a href=""><img src="{%  static './image/facebook-about.png' %}" alt="facebook"></a>
+                        <a href=""><img src="{%  static './image/facebook-about.png' %}" alt="facebook"></a>
+                    </div>
+                
+                
+                </div>
+                <div class="conteiner-desription__text">
+                    <div class="new-avatar-text">
+                        <h4>Sergey Bondarenko</h4>
+                        <p>Flooring specialist</p>
+                    </div>
+                    <div class="new-avatar-description">
+                        
+                        <h5>The best solution for working with floors</h5>
+                    </div>
+                    
+                    
+                </div>
+
+                <div class="new-substrate"></div>
+        
+            </div>
+            <!--  аватарка -->
+
+            <div class="flag-conteiner">
+                <div class="flag-ukraine"></div>
+                <div class="gerb-ukraine"></div>
+                <div class="vertical-line"></div>
+                <div class="flag-canada"></div>
+            </div>
+        
+        </div>
+
+    </section>
+    <!--  new-page-style -->
+
+    <section>
+        <div class="conteiner-img-section">
+            {% for images in project_images %}
+
+                <img src="{{ images.image.url }}" alt="Image" class="image-section"  style="border-radius: 20px 0 20px 0;">
+    
+            {% endfor %}
+        </div>
+    <section>
+
+    </section>
+    <section class="reviews" style="background-color:transparent;">
+        <!--  текст блочный -->
+        <div class="text-service__block-reviews">
+           <div class="text-block_item-reviews">
+               <p>Our satisfied customers</p>
+           </div>
+       </div>
+       <!--  текст блочный -->
+
+       <div class="reviews-conteiner">
+
+            <!--  card -->
+           <div class="reviews-card">
+               <div class="reviews-img">
+                   <img src="{% static '/image/otziv.jpg' %}" alt="" style="width: 130px; height: 130px; border-radius: 50%;  object-fit: cover;">
+               </div>
+               <div class="reviews-description" srtle="text-align: left">
+                   <h6>The best flooring specialists in Toronto did a lot of work</h6>
+               </div>
+              
+           </div>
+           <!--  card -->
+
+
+           <!--  line-modile -->
+           <div class="custom-line"></div>
+           <!--  line-modile -->
+          
+
+            <!--  card -->
+            <div class="reviews-card">
+               <div class="reviews-img">
+                   <img src="{% static '/image/otziv2.jpg' %}" alt=""style="width: 130px; height: 130px; border-radius: 50%;  object-fit: cover;">
+               </div>
+               <div class="reviews-description">
+                   <h6>Professional guys invested on time</h6>
+               </div>
+           </div>
+           <!--  card -->
+
+           <!--  line-modile -->
+           <div class="custom-line"></div>
+           <!--  line-modile -->
+
+            <!--  card -->
+            <div class="reviews-card">
+               <div class="reviews-img">
+                   <img src="{% static '/image/otziv3.jpg' %}" alt=""style="width: 130px; height: 130px; border-radius: 50%;  object-fit: cover;">
+               </div>
+               <div class="reviews-description">
+                   <h6>Fast flooring install, great</h6>
+               </div>
+           </div>
+           <!--  card -->
+
+       </div>
+    </section>
+    <section>
+        <div id="carouselExampleControlsNoTouching" class="carousel slide" data-bs-touch="false" data-bs-interval="false">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="{%  static './image/test2.JPG' %}" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="{%  static './image/test2.JPG' %}" class="d-block w-100" alt="...">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+    </section>
+
 {% endblock %}

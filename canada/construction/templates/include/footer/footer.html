@@ -1,73 +1,109 @@
 {% load static %}
 
-    <!--  footer -->
-    <footer class="footer">
-        <div class="footer-conteiner">
-            <div class="footer-image">
-                <div class="footer-description">
-                    <div class="footer-logo"></div>
-        
-               
-                    <div class="footer-tel">
-                        <div class="footer-tel-column">
-                            <a href=""><img src="{% static '/image/tel-logo.png' %}" alt="facebook"></a>
-                            <a href="tel:+ 097 911 32 26" class="telephone-footer">+097 911 32 26</a>
+   
+    <footer class="top-footer">
+        <div class="container">  
+            <div class="row">
+                <!-- Левая часть (логотип и контакты) -->
+                <div class="col-md-8 col-sm-6 col-12 d-flex flex-column ps-md-5 ps-sm-3 ps-2">
+                    <a href="">
+                        <img class="logo-top-footer" src="{% static 'image/new-fit-logo.png' %}" style="height: 100px;"/>
+                    </a>
+                    <div class="footer-container-top">
+                        <div class="d-flex flex-row align-items-center gap-3">
+                            <img src="{% static 'image/icon-facebook.png' %}" style="width:40px; height: 40px;" class="footer-icon">
+                            <a class="text-decoration-none fw-bold fs-3  phone-footer" style="font-weight: 700; font-family: 'Montserrat', sans-serif;  font-size: 35px;  line-height: 9px;" href="tel:+1234567890">097 911 32 26</a>
                         </div>
-                        <div class="footer-tel-column">
-                            <a href=""><img src="{% static '/image/tel-logo.png' %}" alt="facebook"></a>
-                            <a href="tel:+ 097 911 32 26" class="telephone-footer">+097 911 32 26</a>
+                        <div class="d-flex flex-row align-items-center gap-3">
+                            <img src="{% static 'image/icon-facebook.png' %}" style="width:40px; height: 40px;" class="footer-icon">
+                            <a class="text-decoration-none fw-bold fs-3 phone-footer" style="font-weight: 700; font-family: 'Montserrat', sans-serif;  font-size: 35px;  line-height: 9px;" href="tel:+1234567890">097 911 32 26</a>
                         </div>
-                        
+                        <div class="d-flex flex-column mt-4">
+                            <strong style="font-family: 'Inter', sans-serif; font-size: 20px; font-weight: 900; line-height: 23px; color:#FF9500; text-transform: uppercase;">Work schedule:</strong>
+                            <span  style="font-family: 'Inter', sans-serif; font-size: 18px; font-weight: 200; line-height: 23px; color:#FF9500; text-transform: uppercase;">Mon-Fri from 9.00 to 19.00</span>
+                            <span  style="font-family: 'Inter', sans-serif; font-size: 18px; font-weight: 200; line-height: 23px; color:#FF9500; text-transform: uppercase;">Sat, Sun - day off.</span>
+                        </div>
+                        <div class="d-flex mt-3 gap-2">
+                            <img src="{% static 'image/icon-facebook.png' %}" style="width:30px; height: 30px;" class="footer-icon">
+                            <img src="{% static 'image/icon-facebook.png' %}" style="width:30px; height: 30px;" class="footer-icon">
+                        </div>
+                        <div class="mt-3">
+                            <a class="text-decoration-none text-secondary" href="https://www.web-mars.com/">© всі права захищені - Web Studio “Mars” 2024 </a>
+                        </div>
                     </div>
-                    <div class="footer-text">
-                        <p>Графік роботи:пн-пт с 9.00 до 19.00/ сб, нд - вихідний.</p>
-                    </div>
-                    <div class="footer-soc">
-                        <a href=""><img src="{% static '/image/facebook-footer.png' %}" alt="facebook"></a>
-                        <a href=""><img src="{% static '/image/facebook-footer.png' %}" alt="facebook"></a>
-                        <a href=""><img src="{% static '/image/facebook-footer.png' %}" alt="facebook"></a>
-
-                    </div>
-
-                    <div class="footer-mars">
-                    <a href=""><p>Web Studio “Mars” 2024</p></a>
-                    </div>
-
                 </div>
+    
+                <!-- Правая часть (меню) -->
+                <div class="right-menu-section col-md-4 col-sm-6 col-12 d-flex flex-column mt-md-0 mt-sm-0 mt-4">
+                        <div class="row">
+                            <div class="footer-text-column col-md-6 col-6 mt-5">
+                                <h5 style="text-transform: uppercase;">Menu</h5>
+                                <ul class="footer-text-column-item d-flex flex-column gap-3">
+                                    <li><a href="{% url 'construction:index' %}" class="text-decoration-none">Home</a></li>
+                                    <li><a href="{% url 'construction:about' %}" class="text-decoration-none">About us</a></li>
+                                    <li><a href="{% url 'construction:category_list' %}" class="text-decoration-none">Services</a></li>
+                                    <li><a href="{% url 'construction:projects_all' %}" class="text-decoration-none">Projets</a></li>
+                                </ul>
+                            </div>
+                            <div class="footer-text-column col-md-6 col-6 mt-5">
+                                <h5 style="text-transform: uppercase;">More</h5>
+                                <ul class="footer-text-column-item list-unstyled d-flex flex-column gap-3">
+                                    <li><a href="#" class="text-decoration-none">Service 1</a></li>
+                                    <li><a href="#" class="text-decoration-none">Service 2</a></li>
+                                </ul>
+                            </div>
+                            <div class="footer-text-column col-12 mt-5">
+                                <h5 style="text-transform: uppercase;">Info</h5>
+                                <ul class="footer-text-column-item list-unstyled d-flex flex-column gap-3">
+                                    <li><a href="/#form" class="text-decoration-none">Contact</a></li>
+                                    <li><a href="{% url 'construction:about' %}" class="text-decoration-none">Question</a></li>
+                                    <li><a href="#" class="text-decoration-none">Site Map</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div> 
+
             </div>
-            
-            <div class="footer-description-mobile_conteiner">
-                <div class="footer-description-mobile">
-                    <div class="footer-logo"></div>
-        
+        </div>
+    </footer>
+ <!--  footer -->
 
-                    <div class="footer-tel">
-                        <div class="footer-tel-column">
-                            <a href=""><img src="{% static '/image/tel-logo.png' %}" alt="facebook"></a>
-                            <a href="tel:+ 097 911 32 26" class="telephone-footer">+097 911 32 26</a>
+    {% comment %} <div class="top-footer-mobile-img"><div> {% endcomment %}
+    <footer class="footer-mobile-section">
+        <div class="top-footer-mobile-img"></div>
+        <div class="top-footer-mobile">
+            <div class="container">  
+                <div class="row justify-content-center align-items-center">
+                    <!-- Левая часть (логотип и контакты) -->
+                    <div class="col-md-6 justify-content-center align-items-center d-flex flex-column ps-md-5">
+                        <a href="">
+                            <img class="logo-top-footer-mobi" src="{% static 'image/new-fit-logo.png' %}" style="height: 100px;  margin-right: 30px;  margin-top: 80px;"/>
+                        </a>
+                        <div class="footer-container-top">
+                            <div class="d-flex flex-row align-items-center gap-3">
+                                <img src="{% static 'image/icon-facebook.png' %}" style="width:40px; height: 40px;">
+                                <a class="text-decoration-none fw-bold fs-3  phone-footer" style="font-weight: 700; font-family: 'Montserrat', sans-serif;  font-size: 35px;  line-height: 9px;" href="tel:+1234567890">097 911 32 26</a>
+                            </div>
+                            <div class="d-flex flex-row align-items-center gap-3">
+                                <img src="{% static 'image/icon-facebook.png' %}" style="width:40px; height: 40px;">
+                                <a class="text-decoration-none fw-bold fs-3  phone-footer" style="font-weight: 700; font-family: 'Montserrat', sans-serif;  font-size: 35px;  line-height: 9px;" href="tel:+1234567890">097 911 32 26</a>
+                            </div>
+                            <div class="d-flex flex-column mt-4">
+                                <strong style="font-family: 'Inter', sans-serif; font-size: 20px; font-weight: 900; line-height: 23px; color:#FF9500;">Work schedule:</strong>
+                                <span style="font-family: 'Inter', sans-serif; font-size: 18px; font-weight: 200; line-height: 23px; color:#FF9500; text-transform: uppercase;">Mon-Fri from 9.00 to 19.00</span>
+                                <span  style="font-family: 'Inter', sans-serif; font-size: 18px; font-weight: 200; line-height: 23px; color:#FF9500; text-transform: uppercase;">Sat, Sun - day off.</span>
+                            </div>
+                            <div class="d-flex mt-3 gap-2">
+                                <img class="footer-icon" src="{% static 'image/icon-facebook.png' %}" style="width:30px; height: 30px;">
+                                <img class="footer-icon" src="{% static 'image/icon-facebook.png' %}" style="width:30px; height: 30px;">
+                            </div>
+                            <div class="mt-3">
+                                <a class="text-decoration-none text-secondary" href="https://www.web-mars.com/">© Web Studio “Mars” 2024 </a>
+                            </div>
                         </div>
-                        <div class="footer-tel-column">
-                            <a href=""><img src="{% static '/image/tel-logo.png' %}" alt="facebook"></a>
-                            <a href="tel:+ 097 911 32 26" class="telephone-footer">+097 911 32 26</a>
-                        </div>
-                        
-                    </div>
-                    <div class="footer-text">
-                        <p>Графік роботи:пн-пт с 9.00 до 19.00/ сб, нд - вихідний.</p>
-                    </div>
-                    <div class="footer-soc">
-                        <a href=""><img src="{% static '/image/facebook-footer.png' %}" alt="facebook"></a>
-                        <a href=""><img src="{% static '/image/facebook-footer.png' %}" alt="facebook"></a>
-                        <a href=""><img src="{% static '/image/facebook-footer.png' %}" alt="facebook"></a>
-                    </div>
-
-                    <div class="footer-mars">
-                    <a href=""><p>Web Studio “Mars” 2024</p></a>
-                    </div>
-
                 </div>
-            </div>
+            </div>    
+    
 
         </div>
     </footer>
-    <!--  footer -->

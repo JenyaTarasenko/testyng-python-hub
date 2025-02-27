@@ -1,3 +1,4 @@
+
 @media (max-width: 1209px){
 
 /* section */
@@ -28,6 +29,18 @@
    
 }
 @media (max-width: 1200px){
+    
+    .new-page-text-items {
+        max-width: 600px;
+        padding:30px;
+    }  
+   
+
+    .new-page-text-description {
+
+        max-width: 600px;
+        padding: 30px;
+    }
 
     .home-conteiner {
 
@@ -79,7 +92,7 @@
 
     .form {
 
-        height: 600px;
+        height: 700px;
     } 
     .text-form-top-mobile  {
         display: block;
@@ -92,12 +105,30 @@
 }
 @media (max-width: 1139px){
 
+    #carusel-galery {
+
+        width: 800px;
+        height: 600px;
+
+
+    }
+
+    .row-service {
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;  /* Центрирует элементы по горизонтали */
+        justify-content: center;  /* Центрирует элементы по вертикали */
+      
+    }
     .reviews {
 
         height: 400px;
     }
 }
 @media (max-width: 1100px){
+
+   
     .service-block__conteiner{
 
         flex-direction: column;
@@ -123,6 +154,15 @@
         width: 900px;
     }
 }
+@media (max-width: 1069px){
+
+    .right-menu-section {
+
+        display: none !important;
+    }
+
+}
+
 @media (max-width: 1071px){
 
     /*  showroom */
@@ -184,7 +224,14 @@
 
 
 }
+
+
+
 @media (max-width: 974px){
+
+    #carusel-galery {
+        width: 500px;
+    }    
    
     .new-detail_image {
         width: 800px;
@@ -200,10 +247,23 @@
     /* our service */
     .service-image {
 
-        height: 700px;
+        height: 800px;
     }
     /* our service */
 
+}
+@media (max-width: 870px){
+
+    .top-footer {
+
+        display: none;
+    }
+    .footer-mobile-section {
+
+        display: block;
+
+
+    }
 }
 
 @media (max-width: 870px){
@@ -223,17 +283,47 @@
 
 @media (max-width: 834px){
 
-    .detail-card {
+    /* .detail-card {
 
         display: none;
-    }
-    .slider-card {
+    } */
+    /* .slider-card {
 
         display: block;
-    }
+    } */
 }
 
 @media (max-width: 768px){
+
+    .service-new-block img {
+
+        width: 500px;
+    }
+
+    .service-block-text-new{
+
+        width: 500px;
+    }
+
+    .detail-image__conteiner{
+
+        background-image:url(./image/showroom-planshet.png);
+        border-radius: 0;
+
+
+    }
+    .service-image__conteiner{
+        background-image:url(./image/service-new-planshet.png);
+        border-radius: 0;
+
+
+    }
+
+    .new-page-image {
+
+        background-image: url(./image/about-planshet.png);
+        border-radius: 0;
+    }
 
     .service-block_image img {
         width: 480px;
@@ -309,9 +399,12 @@
 
         display: flex;
     } 
+    .home-description h1 {
+        font-size: 40px;
+    }
     .home-image {
 
-        background-image: url(./image/home-section.png);
+        background-image: url(./image/firs-page-home.png);
         width: 100%;
         height: 820px;
 
@@ -330,9 +423,13 @@
         height: 600px;
 
     }
+    .urban-btn {
+
+        margin-left:0px;
+    }
     .urban-image {
 
-        background-image: url(./image/about-section.png);
+        background-image: url(./image/first-about.png);
         width: 100%;
         height: 820px;
         display: flex;
@@ -357,6 +454,7 @@
 
 @media (max-width: 768px){
 
+   
     .video-container {
 
         width: 480px;
@@ -368,18 +466,70 @@
     }
 
 }
+@media (max-width: 600px) {
 
+    #carusel-galery {
+        width: 400px;
+    }    
+
+    .service-new-block img {
+        width: 325px;
+        height: 350px;
+    }   
+    .service-block-text-new  {
+
+        width: 325px;
+
+
+    } 
+    .serv-text h2 {
+
+        font-size: 40px;
+    }
+    .serv-text h3 {
+
+        font-size: 18px;
+
+
+    }
+
+}
 
 @media (max-width: 639px) {
     .service-image {
         height: 1000px;
     }
+    .text-block h4 {
+
+        font-size: 30px;
+    }
+
 }
 
 @media (max-width: 560px) {
+   
+    .detail-image__conteiner{
+
+        background-image:url(./image/showroom-mob.png);
+        border-radius: 0;
+
+
+    }
+
+    .new-page-image {
+        background-image:url(./image/about-mobile.png);
+        border-radius: 0;
+
+    }
+    .service-image__conteiner{
+        background-image:url(./image/service-new-mobile.png);
+        border-radius: 0;
+
+
+    }
     .card-detail__conteiner {
 
-        width: 325px;
+        width: 310px;
         height: 450px;
 
     }
@@ -407,8 +557,9 @@
         max-width: 190px;
         max-height: 45px; 
     }
+    
     .new-avatar-description h5{
-
+        text-align: left;
         font-size: 15px;
         line-height: 15px
     }  
@@ -484,7 +635,28 @@
 
     .new-page-text-items h1 {
 
-        font-size: 55px;
+        font-size: 40px;
+    }
+    .new-item h2  {
+
+        font-size: 20px;
+    }
+    .new-item h3 {
+
+        font-size: 20px;
+    }
+    .new-item h4 {
+
+        font-size: 20px;
+    }
+    .new-item p  {
+
+        font-size: 20px;
+    }
+    .new-item-text h6 {
+
+        font-size: 20px;
+
     }
     /*  showroom card */
     .showroom-card {
@@ -510,6 +682,7 @@
     .showroom-conteiner {
         height: 900px;
         gap: 30px;
+        margin-top: 100px;
     }    
     /*  showroom card */
 
@@ -568,6 +741,24 @@
     
 }
 @media (max-width: 480px) {
+   
+    .service-btn {
+
+        width: 320px;
+    }
+    .form-field {
+
+        width: 320px;
+
+    }
+
+    .service-block-text-new {
+        width: 270px;
+    } 
+    .serv-text-item h3{
+
+        font-size: 16px;
+    }
     .flag-conteiner {
 
         gap: 0;
@@ -584,9 +775,9 @@
         margin-left: 10px;
     }
     .new-detail_text {
-        max-width: 400px;
-        padding: 30px;
-        margin-top: 70px;
+        max-width: 350px;
+        padding: 20px;
+       
     }   
     .new-detail_conteiner{
 
@@ -643,10 +834,10 @@
         height: 800px;
     }
 
-    .service-btn-conteiner {
+    /* .service-btn-conteiner {
     
         display: none;
-    }
+    } */
     .service-image {
         height: 900px;
     }
@@ -667,8 +858,20 @@
         max-width: 350px;
     }
      /* page reviews */
-     .new-item p {
+}
 
-        padding: 0 30px;
-     }
+@media (max-width: 480px) {
+    .detail-text-block_item{
+
+        width: 200px;
+    }
+    .conteiner-desription__text {
+
+        width: 150px;
+        margin-bottom: 50px;
+    }
+    .new-substrate {
+        width: 320px;
+    }
+        
 }

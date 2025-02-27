@@ -1,18 +1,178 @@
-
-
+{% extends "app/base.html" %}
+{% load static %}
+{% block title %}Canada page card{% endblock %}
 {% block content %}
-  <h1>{{ context.name }}</h1>
-  <h1>{{ context.description }}</h1>
+
+    <section class="detail">
+        <div class="detail-image__conteiner"></div>
+    </section>
+
+    <div class="detail-text-service__block">
+        <div class="detail-text-block">
+            <h4>{{category.name}}</h4>
+        </div>
+        <div class="detail-text-block_item">
+          <p>areas what we serv</p>
+    </div>
+    
+    <section class="responsive-section">
+        <div class="container-section">
+            <div class="image-container">
+                <img src="{{ category.image.url }}" alt="Image" class="img-fluid"  style="border-radius: 20px 0 20px 0;">
+            </div>
+            <div class="text-container">
+                <p>{{ category.description }}</p>
+            </div>
+            <div class="text-container">
+              <p>{{ category.technologies }}</p>
+          </div>
+    </section>
+
+    <div class="detail-text-service__block">
+      <div class="detail-text-block">
+          <h4>Projects</h4>
+      </div>
+      <div class="detail-text-block_item">
+        <p>aProjects related to the category</p>
+    </div>
 
 
+    <section class="detail-card">
+        <div class="card-conteiner-items">
 
+        <!-- карта -->
+        {% for project in projects %} 
+            <a href="{% url "construction:project_detail" project.slug %}"class="project-href">
+                
+                <div class="card-detail__conteiner">
+                    <div class="detail-image_card">
+                    <img src="{{ project.image.url }}" alt="">
+                    </div>
+                    <img src="{% static '/image/down-line.png' %}" alt="Круг" class="circle"> <!-- Картинка круга -->
+                    <div class="detail-text_card">
+                    <h4>{{ project.name }}</h4>
+                    </div>
+                    <div class="detail-text_card-description">
+                    <p>{{ project.description|truncatewords:12  }}</p>
+                    </div>
+                </div>
+            </a>
+        {% endfor %}
+        
+
+
+        </div>
+    </section>
+<!-- секция card -->
+       <!--  new-page-style -->
+    <section class="new-style">
+        <div class="new-style-man">
+        
+            <!--  аватарка -->
+            <div class="new-style-avatar-conteiner">
+
+                <div class="conteiner-avatar">
+                    <div class="new-style-avatar">
+                        <img src="{%  static './image/about-face.png' %}" alt="man">
+                    </div>
+                    <div class="new-style-social">
+                        <a href=""><img src="{%  static './image/facebook-about.png' %}" alt="facebook"></a>
+                        <a href=""><img src="{%  static './image/facebook-about.png' %}" alt="facebook"></a>
+                    </div>
+                
+                
+                </div>
+                <div class="conteiner-desription__text">
+                    <div class="new-avatar-text">
+                        <h4>Sergey Bondarenko</h4>
+                        <p>Flooring specialist</p>
+                    </div>
+                    <div class="new-avatar-description">
+                        
+                        <h5>The best solution for working with floors</h5>
+                    </div>
+                    
+                    
+                </div>
+
+                <div class="new-substrate"></div>
+        
+            </div>
+            <!--  аватарка -->
+
+            <div class="flag-conteiner">
+                <div class="flag-ukraine"></div>
+                <div class="gerb-ukraine"></div>
+                <div class="vertical-line"></div>
+                <div class="flag-canada"></div>
+            </div>
+        
+        </div>
+    </section>
+    <!--  new-page-style -->
+
+    <section class="reviews" style="background-color:transparent;">
+        <!--  текст блочный -->
+        <div class="text-service__block-reviews">
+           <div class="text-block_item-reviews">
+               <p>Our satisfied customers</p>
+           </div>
+       </div>
+       <!--  текст блочный -->
+
+       <div class="reviews-conteiner">
+
+            <!--  card -->
+           <div class="reviews-card">
+               <div class="reviews-img">
+                   <img src="{% static '/image/otziv4.jpg' %}" alt="" style="width: 130px; height: 130px; border-radius: 50%;  object-fit: cover;">
+               </div>
+               <div class="reviews-description" srtle="text-align: left">
+                   <h6>The best flooring specialists in Toronto did a lot of work</h6>
+               </div>
+              
+           </div>
+           <!--  card -->
+
+
+           <!--  line-modile -->
+           <div class="custom-line"></div>
+           <!--  line-modile -->
+          
+
+            <!--  card -->
+            <div class="reviews-card">
+               <div class="reviews-img">
+                   <img src="{% static '/image/otziv6.jpg' %}" alt=""style="width: 130px; height: 130px; border-radius: 50%;  object-fit: cover;">
+               </div>
+               <div class="reviews-description">
+                   <h6>Fast and high-quality work, the floors were done very well</h6>
+               </div>
+           </div>
+           <!--  card -->
+
+           <!--  line-modile -->
+           <div class="custom-line"></div>
+           <!--  line-modile -->
+
+            <!--  card -->
+            <div class="reviews-card">
+               <div class="reviews-img">
+                   <img src="{% static '/image/otziv5.jpg' %}" alt=""style="width: 130px; height: 130px; border-radius: 50%;  object-fit: cover;">
+               </div>
+               <div class="reviews-description">
+                   <h6>Top quality, best in the business</h6>
+               </div>
+           </div>
+           <!--  card -->
+
+       </div>
+   </section>
 
   
-  <!-- Добавьте ссылки на другие проекты, связанные с этой категорией, если нужно -->
-  <h2>Проекты в этой категории:</h2>
-  <ul>
-    {% comment %} {% for project in category.projects.all %}
-      <li><a href="{{ project.get_absolute_url }}">{{ project.name }}</a></li>
-    {% endfor %}
-  </ul> {% endcomment %}
+
+  
+
+
+
 {% endblock %}

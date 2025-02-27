@@ -2,63 +2,74 @@
 {% load static %}   
 
     <div class="head_navigator" style="position: absolute; top: 0; left: 0; right: 0; z-index: 100;">
-        <head class="top-head"> 
+        <div class="top-head"> 
             <div class="conteiner-top-head">
                 <div class="top-header_items">
-                    <a href=""><img src="{% static 'image/icon-facebook.png' %}" alt="facebook"></a>
-                    <a href=""><img src="{% static 'image/icon-facebook.png' %}" alt="facebook"></a>
-                    <a href=""><img src="{% static 'image/icon-facebook.png' %}" alt="facebook"></a>
+                    <a href=""><img src="{% static 'image/icon-facebook.png' %}" alt="facebook" style="width: 40px; height: 40px;"></a>
+                    <a href=""><img src="{% static 'image/instagram.png' %}" alt="instagram"></a>
                 </div>
                 <div class="top-header_logo">
-                    <a href=""><img src="{% static 'image/canada-logo.png' %}" alt="logo"></a>
+                    <a href="{% url 'construction:index' %}"><img src="{% static 'image/new-fit-logo.png' %}" alt="logo" class="top-header_logo-img"></a>
                 </div>
                 <div class="top-header_telephone">
-                    <a href=""><img src="{% static 'image/icon-facebook.png' %}" alt="facebook"></a>
+                    <a href=""><img src="{% static 'image/tel.png' %}" alt="facebook"></a>
                     <a href="tel:+ 097 911 32 26" class="telephone-header">+097 911 32 26</a>
                 </div>
             </div>
-        </head>
+        </div>
         <!-- линия навигации -->
         <div class="horizontal-bar"></div>
         <!-- линия навигации -->
 
-        <!--  нижняя часть навигации -->
+       
+
+      
         <nav class="navbar navbar-expand-lg" style="background-color:#282E33;">
             <div class="container">
-            <!-- Логотип -->
-            <a class="navbar-brand d-lg-none" href="#">
-                <img src="{% static 'image/canada-logo.png' %}" alt="logo" style="width: 150px; height:100px;">
-            </a>
-        
-            <!-- Кнопка бургер-меню -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon" style="background-image: url({% static "/image/burger-menu.png" %});"></span>
-            </button>
+                <!-- Логотип -->
+                <a class="navbar-brand d-lg-none" href="{% url 'construction:index' %}">
+                    <img src="{% static 'image/new-fit-logo.png' %}" alt="logo" style="width: 100px;">
+                </a>
             
-            <!-- Навигация -->
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav mx-auto"> <!-- Центрируем пункты меню -->
-                <li class="nav-item">
-                    <a class="nav-link {% if request.path == '/' %}active{% endif %}" href="{% url 'construction:index' %}">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link {% if request.path == '/about/' %}active{% endif %}" href="{% url 'construction:about' %}">About Us</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link {% if request.path == '/detail/' %}active{% endif %}" href="{% url 'construction:detail' %}">About Us</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link {% if request.path == '/card/' %}active{% endif %}" href="{% url 'construction:card' %}">Card</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'construction:test' %}">Cost</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Contact</a>
-                </li>
-                </ul>
-            </div>
+                <!-- Кнопка бургер-меню -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon" style="background-image: url({% static "image/burger-menu.png" %});"></span>
+                </button>
+                
+                <!-- Навигация -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto"> <!-- Центрируем пункты меню -->
+                        <li class="nav-item">
+                            <a class="nav-link {% if request.path == '/' %}active{% endif %}" href="{% url 'construction:index' %}">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link {% if request.path == '/about/' %}active{% endif %}" href="{% url 'construction:about' %}">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link {% if request.path == '/category-detail-page/' %}active{% endif %}" href="{% url 'construction:category_list' %}">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link {% if request.path == '/projects-all/' %}active{% endif %}" href="{% url 'construction:projects_all' %}">Projects</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link {% if request.path == '/divers/' %}active{% endif %}" href="{% url 'construction:questions' %}">questions</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link {% if request.path == '/divers/' %}active{% endif %}" href="{% url 'construction:index' %}#form">Contact</a>
+                        </li>
+                        {% comment %} <li class="nav-item">
+                            <a class="nav-link {% if request.path == '/question/' %}active{% endif %}" href="{% url 'construction:diverse' %}">Miscellaneous</a>
+                        </li> {% endcomment %}
+                        <li class="nav-item">
+                            <a class="nav-link {% if request.path == '/gallery/' %}active{% endif %}" href="{% url 'construction:gallery' %}">Gallery</a>
+                        </li>
+                    </ul>
+                    </ul>
+                    </ul>
+                </div>
             </div>
         </nav>
-        <!--  нижняя часть навигации -->
+
+       
     </div>   
+

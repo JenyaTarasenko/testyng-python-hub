@@ -1,0 +1,205 @@
+{% extends "app/base.html" %}
+{% load static %}
+{% block title %}Canada page card{% endblock %}
+{% block content %}
+        <!--  first-detail -->
+    <section class="detail">
+        <div class="detail-image__conteiner"></div>
+    </section>
+      <!--  first-detail -->
+
+    
+    
+      <!--  текст блочный -->
+    <section class="text-detail">
+        <div class="detail-text-service__block">
+          <div class="detail-text-block">
+              <h4>All projects of our company</h4>
+          </div>
+          <div class="detail-text-block_item">
+            <p>We have done many projects for the Canadian market</p>
+        </div>
+        </div>
+    </section>
+      <!--  текст блочный -->
+
+      <!-- секция card -->
+    <section class="detail-card">
+
+        <div class="card-conteiner-items">
+
+          <!-- карта -->
+          {% for project in projects %} 
+              <a href="{% url "construction:project_detail" project.slug %}"class="project-href">
+                
+                <div class="card-detail__conteiner">
+                    <div class="detail-image_card">
+                      <img src="{{ project.image.url }}" alt="">
+                    </div>
+                    <img src="{% static '/image/down-line.png' %}" alt="Круг" class="circle"> <!-- Картинка круга -->
+                    <div class="detail-text_card">
+                      <h4>{{ project.name }}</h4>
+                    </div>
+                    <div class="detail-text_card-description">
+                      <p>{{ project.description|truncatewords:12  }}</p>
+                    </div>
+                  </div>
+              </a>
+          {% endfor %}
+          
+
+
+          {% comment %} <!-- карта -->
+          <div class="card-detail__conteiner">
+            <div class="detail-image_card">
+              <img src="{% static './image/showroom-1.png' %}" alt="">
+            </div>
+            <img src="{% static '/image/down-line.png' %}" alt="Круг" class="circle"> <!-- Картинка круга -->
+            <div class="detail-text_card">
+              <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h4>
+            </div>
+            <div class="detail-text_card-description">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus .</p>
+            </div>
+
+          </div>
+          <!-- карта --> {% endcomment %}
+
+        </div>
+    </section>
+    <!-- секция card -->
+    
+    
+
+    {% comment %} <section class="slider-card"> 
+        <div id="cardSlider" class="carousel slide" data-bs-ride="carousel">
+          <!-- Индикаторы (опционально) -->
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#cardSlider" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#cardSlider" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#cardSlider" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          </div>
+      
+          <!-- Слайды -->
+          <div class="carousel-inner">
+            <!-- Первый слайд -->
+            <div class="carousel-item active">
+              <div class="card-conteiner-items">
+                <div class="card-detail__conteiner">
+                  <div class="detail-image_card">
+                    <img src="{% static './image/showroom-3.png' %}" alt="">
+                  </div>
+                  <img src="{% static './image/down-line.png' %}" alt="Круг" class="circle">
+                  <div class="detail-text_card">
+                    <h4>Lorem ipsum dolor sit amet </h4>
+                  </div>
+                  <div class="detail-text_card-description">
+                    <p>Lorem ipsum dolor sit amet consectetur</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+      
+            <!-- Второй слайд -->
+            <div class="carousel-item">
+              <div class="card-conteiner-items">
+                <div class="card-detail__conteiner">
+                  <div class="detail-image_card">
+                    <img src="{% static './image/showroom-3.png' %}" alt="">
+                  </div>
+                  <img src="{% static './image/down-line.png' %}" alt="Круг" class="circle">
+                  <div class="detail-text_card">
+                    <h4>Lorem ipsum dolor sit </h4>
+                  </div>
+                  <div class="detail-text_card-description">
+                    <p>Lorem ipsum dolor sit amet consectetur </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+      
+            <!-- Третий слайд -->
+            <div class="carousel-item">
+              <div class="card-conteiner-items">
+                <div class="card-detail__conteiner">
+                  <div class="detail-image_card">
+                    <img src="{% static './image/showroom-3.png' %}" alt="">
+                  </div>
+                  <img src="{% static './image/down-line.png' %}" alt="Круг" class="circle">
+                  <div class="detail-text_card">
+                    <h4>Lorem ipsum dolor sit amet</h4>
+                  </div>
+                  <div class="detail-text_card-description">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      
+          <!-- Управляющие кнопки -->
+          <button class="carousel-control-prev" type="button" data-bs-target="#cardSlider" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Предыдущий</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#cardSlider" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Следующий</span>
+          </button>
+        </div>
+    </section>   {% endcomment %}
+      
+  
+    
+ 
+
+
+   <!-- секция картинка -->
+  <section class="new-detail" >
+    <div class="new-detail_conteiner">
+
+     
+
+     <!-- секция картинка -->
+  <section class="new-detail">
+      <div class="new-detail_conteiner new-detail-two">
+  
+        <div class="detail-text-service__block">
+          <div class="detail-text-block">
+              <h4>Showroom</h4>
+          </div>
+          <div class="detail-text-block_item">
+            <p>areas what we serv</p>
+        </div> 
+      </div>
+  </section>
+  <section class="responsive-section">
+      <div class="container-section">
+        {% for random in random_projects %}
+          <a href="{% url "construction:project_detail" random.slug %}"class="project-href">    
+            <div class="image-container">
+                <img src="{{ random.image.url }}" alt="Image" class="img-fluid"  style="border-radius: 20px 0 20px 0;">
+            </div>
+            <div class="text-container">
+                <p>{{ random.description|truncatewords:30  }}</p>
+            </div> 
+          </a>  
+        {% endfor %}    
+      </div>
+    </section>
+    <!-- секция картинка -->
+    <div class="text-service__block">
+        <div class="text-block">
+            <h4>Why Choose Us in Toronto for Flooring</h4>
+        </div>
+    </div>
+    <div class="container mt-1">
+        <div class="row">
+            <div class="col-12 p-3 p-md-4 new-item-about">
+                <h1 style="color:#282e33cf;font-weight: 400;font-family: 'Montserrat', sans-serif;">We specialize in flooring—installing parquet, laminate, vinyl, linoleum, and carpet across Toronto. Using advanced Double Glue Down technology (underlay, glue below and above, then parquet), we handle all parquet styles—Chevron, Herringbone, and planks. Our projects, big or small, are completed fast with top quality, tailored to Canadian homes.</h1>
+            </div>
+        </div>
+
+    </div>
+
+  {% endblock%} 

@@ -32,9 +32,10 @@ class ProjectSitemap(Sitemap):
     def location(self, obj):
         return reverse('construction:project_detail', args=[obj.slug])
         
+    # def location(self, obj):
+    # return f"{settings.SITE_URL}/mars_studio/{obj.slug}/"
     
-    
-    
+    # добавить после обновления домен
     
           
         

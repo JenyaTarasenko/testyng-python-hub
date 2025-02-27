@@ -66,11 +66,11 @@
             }
         }
      </script>
-     <link rel="preconnect" href="https://fonts.googleapis.com">
-     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
      
-     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
             <!-- Стили -->
@@ -82,13 +82,23 @@
 <body>
 
     {% include 'include/menu/menu.html' %}
-    <main>
-        {% block content %}
-
-        {% endblock %}
-    </main>
+        <main>
+            {% block content %}
+                
+            {% endblock %}
+        </main>
     {% include 'include/footer/footer.html' %}
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
-
+    <div class="social-icons">
+        <a href="https://t.me/your_telegram" target="_blank" aria-label="Telegram">
+            <img src="{% static 'image/soc-new-mail.png' %}" alt="Telephone">
+        </a>
+        <a href="https://t.me/your_telegram" target="_blank" aria-label="Telegram">
+            <img src="{% static 'image/soc-new-telega.png' %}" alt="Telegram">
+        </a>
+        <a href="https://wa.me/your_whatsapp_number" target="_blank" aria-label="WhatsApp">
+            <img src="{% static 'image/soc-new-what.png' %}" alt="WhatsApp">
+        </a>
+    </div>
 </body>   
 </html> 

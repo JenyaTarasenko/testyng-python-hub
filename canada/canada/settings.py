@@ -136,9 +136,9 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'jenyatarasenko07@gmail.com' 
-
-EMAIL_HOST_PASSWORD = 'cbfbusvvnjblcnle'
+EMAIL_HOST_USER = 'torontosergey62@gmail.com' 
+EMAIL_HOST_PASSWORD = 'prurbhadxdhvlipa'
+# EMAIL_HOST_PASSWORD = 'cbfbusvvnjblcnle'
 # EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD')
 
 
@@ -159,7 +159,7 @@ TELEGRAM_BOT_TOKEN = "7515498927:AAFmVre9UZruTG6dn2edZCSnENU_hL2GaHU"
 TELEGRAM_CHAT_ID = 530704410
 ####### telegram-bot ######
 
-
+ALLOWED_HOSTS = ['jdreamer.pythonanywhere.com', 'localhost', '127.0.0.1']
 
 
 

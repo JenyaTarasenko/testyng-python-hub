@@ -6,9 +6,11 @@ class Category(models.Model):
     name = models.CharField(max_length=200, verbose_name='Название категории проекта')
     slug = models.SlugField(max_length=200, unique=True, verbose_name="URL-адрес категории")
     description = models.TextField(verbose_name="Описание категории", blank=True, null=True)
+    image = models.ImageField(upload_to='categories/images/', verbose_name='Фото категории', blank=True, null=True)
+    technologies = models.TextField(verbose_name="Технологии категории", blank=True, null=True)
     
     def get_absolute_url(self):
-      return reverse('category_detail', args=[self.slug])
+      return reverse('construction:category_detail', kwargs={"slug": self.slug})
 
     
     class Meta:
@@ -34,7 +36,7 @@ class Project(models.Model):
     
     
     def get_absolute_url(self):
-         return reverse("project_detail", kwargs=[self.slug])
+         return reverse("construction:project_detail", kwargs={"slug": self.slug})
     
     
     
@@ -56,3 +58,12 @@ class ContactForm(models.Model):
     
     def __str__(self):
         return  self.name
+    
+    
+class ProjectImage(models.Model):
+    project = models.ForeignKey(Project, on_delete=models.CASCADE, related_name='images', verbose_name="Проект") 
+    image = models.ImageField(upload_to='projects/images/', verbose_name='Изображение проекта')   
+    
+    
+    def __str__(self):
+        return f"Изображение для {self.project.name}"    
