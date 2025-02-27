@@ -129,8 +129,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 os.environ['SSL_CERT_FILE'] = '/Users/kiril/Desktop/Project_python/Canada-project/venv/lib/python3.11/site-packages/certifi/cacert.pem'
 
 
-os.environ['SSL_CERT_FILE'] = certifi.where()
-os.environ['SSL_CERT_DIR'] = certifi.where()
+
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
@@ -143,6 +142,18 @@ EMAIL_HOST_PASSWORD = 'prurbhadxdhvlipa'
 
 
 
+
+
+####### telegram-bot ######
+TELEGRAM_BOT_TOKEN = "7515498927:AAFmVre9UZruTG6dn2edZCSnENU_hL2GaHU"
+TELEGRAM_CHAT_ID = 530704410
+####### telegram-bot ######
+
+ALLOWED_HOSTS = ['localhost', '127.0.0.1']
+
+
+
+
 STATIC_URL = '/static/'
 STATIC_DIR = os.path.join(BASE_DIR, 'static')
 STATICFILES_DIRS = [STATIC_DIR]
@@ -152,39 +163,3 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 # Медиафайлы
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-
-
-####### telegram-bot ######
-TELEGRAM_BOT_TOKEN = "7515498927:AAFmVre9UZruTG6dn2edZCSnENU_hL2GaHU"
-TELEGRAM_CHAT_ID = 530704410
-####### telegram-bot ######
-
-ALLOWED_HOSTS = ['jdreamer.pythonanywhere.com', 'localhost', '127.0.0.1']
-
-
-
-
-# EMAIL_SSL_CERTFILE=certifi.where()
-# EMAIL_SSL_KEYFILE = None
-
-# --------Проверка в shell что почта работает -------
-
-# import smtplib
-# import ssl
-# import certifi
-
-# context = ssl.create_default_context(cafile=certifi.where())
-# server = smtplib.SMTP('smtp.gmail.com', 587)
-
-# try:
-#     server.starttls(context=context)
-#     server.login('jenyatarasenko07@gmail.com', 'cbfbusvvnjblcnle')
-#     print("SMTP connection successful!")
-# except smtplib.SMTPAuthenticationError as e:
-#     print(f"Authentication error: {e}")
-# except Exception as e:
-#     print(f"An error occurred: {e}")
-# finally:
-#     server.quit()
-
- # --------Проверка в shell что почта работает -------
