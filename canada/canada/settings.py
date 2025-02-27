@@ -149,7 +149,7 @@ TELEGRAM_BOT_TOKEN = "7515498927:AAFmVre9UZruTG6dn2edZCSnENU_hL2GaHU"
 TELEGRAM_CHAT_ID = 530704410
 ####### telegram-bot ######
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['Bonderenko.pythonanywhere.com','localhost', '127.0.0.1']
 
 
 
