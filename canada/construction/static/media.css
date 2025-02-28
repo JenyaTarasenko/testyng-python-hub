@@ -698,7 +698,7 @@
 
     .detail-text-block h4 {
 
-        font-size: 50px;
+        font-size: 35px;
     }
     .service-block_image-top img ,
     .service-block_image img {
@@ -861,10 +861,10 @@
 }
 
 @media (max-width: 480px) {
-    .detail-text-block_item{
+    /* .detail-text-block_item{
 
         width: 200px;
-    }
+    } */
     .conteiner-desription__text {
 
         width: 150px;

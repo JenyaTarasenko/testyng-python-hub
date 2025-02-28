@@ -2331,6 +2331,7 @@ input::placeholder {
 }
 
 .serv-text-description p {
+    margin-left: 10px;
 
     font-size: 18px;
     font-weight: 900;
