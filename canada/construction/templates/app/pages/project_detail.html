@@ -18,7 +18,12 @@
     <section class="responsive-section">
         <div class="container-section">
             <div class="image-container">
-                <img src="{{ project.image.url }}" alt="Image" class="img-fluid"  style="border-radius: 20px 0 20px 0;">
+                {% if project.image %}
+                    <img src="{{ project.image.url }}"  alt="Image" class="img-fluid"  style="border-radius: 20px 0 20px 0;">
+                {% else %}
+                    <img src="/static/image/no-image.png" alt="No image">
+                {% endif %}
+                {% comment %} <img src="{{ project.image.url }}" alt="Image" class="img-fluid"  style="border-radius: 20px 0 20px 0;"> {% endcomment %}
             </div>
             <div class="text-container">
                 <p>{{ project.description }}</p>
@@ -75,9 +80,13 @@
     <section>
         <div class="conteiner-img-section">
             {% for images in project_images %}
-
-                <img src="{{ images.image.url }}" alt="Image" class="image-section"  style="border-radius: 20px 0 20px 0;">
-    
+                {% if images.image %}
+                    <img src="{{ images.image.url }}"  alt="Image" class="image-section"  style="border-radius: 20px 0 20px 0;">
+                {% else %}
+                    <img src="/static/image/no-image.png" alt="No image">
+                {% endif %}
+                {% comment %} <img src="{{ images.image.url }}" alt="Image" class="image-section"  style="border-radius: 20px 0 20px 0;">
+     {% endcomment %}
             {% endfor %}
         </div>
     <section>

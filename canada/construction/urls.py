@@ -16,7 +16,7 @@ urlpatterns = [
     path('category-detail/<slug:slug>/', views.category_detail, name="category_detail"),
     path('diverse/', TemplateView.as_view(template_name="app/pages/questions.html"), name="questions"), #для статических страничек сайта diverse
     path('about/', TemplateView.as_view(template_name="app/pages/about.html"), name="about"), #для статических страничек сайта about 
-    path('gallery/', TemplateView.as_view(template_name="app/pages/gallery.html"), name="gallery"), #для статических страничек сайта gallery
+    # path('gallery/', TemplateView.as_view(template_name="app/pages/gallery.html"), name="gallery"),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -34,7 +34,12 @@
                 
                 <div class="card-detail__conteiner">
                     <div class="detail-image_card">
-                      <img src="{{ project.image.url }}" alt="">
+                      {% if project.image %}
+                          <img src="{{ project.image.url }}" alt="">
+                      {% else %}
+                          <img src="/static/image/no-image.png" alt="No image">
+                      {% endif %}
+                      {% comment %} <img src="{{ project.image.url }}" alt=""> {% endcomment %}
                     </div>
                     <img src="{% static '/image/down-line.png' %}" alt="Круг" class="circle"> <!-- Картинка круга -->
                     <div class="detail-text_card">
