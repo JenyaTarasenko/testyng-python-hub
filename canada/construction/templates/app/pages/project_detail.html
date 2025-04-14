@@ -90,65 +90,71 @@
             {% endfor %}
         </div>
     <section>
+        <div class="detail-text-service__block">
+            <div class="detail-text-block">
+                <h4>Reviews from our clients</h4>
+            </div>
+            <div class="detail-text-block_item">
+              <p>To leave a review, register and enter your password and login in the appropriate menu items.</p>
+        </div>
 
-    </section>
-    <section class="reviews" style="background-color:transparent;">
-        <!--  текст блочный -->
-        <div class="text-service__block-reviews">
-           <div class="text-block_item-reviews">
-               <p>Our satisfied customers</p>
-           </div>
-       </div>
-       <!--  текст блочный -->
+    <section>
+        <div class="container">
+            <div class="row align-items-center justify-content-center gap-2">
+                {% for review in reviews %}
+                    <!-- Используйте адаптивные колонки для гибкости -->
+                
+                        <div class="card fixed-card" style="width: 300px; height: 300px; border-radius: 30px;">
+                            <div class="card-body text-left d-flex flex-column justify-content-start align-items-start px-1";>
+                                <!-- Изображение -->
+                                <img src="{% static './image/man2.png' %}" class="card-img-top mt-3" alt="Image" style="height: 50px; width: 50px;">
+                            
+                                <!-- Имя -->
+                                <h5 class="card-title-review mt-2 text-left">{{ review.user.username }}</h5>
+                                <img src="{% static './image/stars.png' %}" class="card-img-bottom" alt="Image" style="width: 100px;">
+                            
+                                <!-- Текст отзыва -->
+                                <p class="card-text-review mt-2">{{ review.content|slice:":150" }}</p>
+                            </div>
+                        </div>
+                
+                {% endfor %}
+            </div>
+        </div>
 
-       <div class="reviews-conteiner">
+        {% if user.is_authenticated %}
+            <div class="container mt-5 px-4 mb-2">
+                <form method="post">
+                    {% csrf_token %}
+                    <div class="mb-3 form-review">
+                        {{ form.as_p }}
+                    </div>
+                    <button type="submit" class="home-btn">Send</button>
+                </form>
+            </div>
+        {% else %}
+            <div class="container mt-4">
+                <p>Only<a href="{% url 'construction:register' %}">authorized users</a>can leave reviews.</p>
+            </div>
+        {% endif %}
+        {% if messages %}
+            <div class="alert alert-success mt-3">
+                <ul>
+                {% for message in messages %}
+                    <li>{{ message }}</li>
+                {% endfor %}
+                </ul>
+            </div>
+        {% endif %}
+    </section>   
 
-            <!--  card -->
-           <div class="reviews-card">
-               <div class="reviews-img">
-                   <img src="{% static '/image/otziv.jpg' %}" alt="" style="width: 130px; height: 130px; border-radius: 50%;  object-fit: cover;">
-               </div>
-               <div class="reviews-description" srtle="text-align: left">
-                   <h6>The best flooring specialists in Toronto did a lot of work</h6>
-               </div>
-              
-           </div>
-           <!--  card -->
+    <div class="detail-text-service__block mt-4">
+        {% comment %} <div class="detail-text-block">
+            <h4>Reviews from our clients</h4>
+        </div> {% endcomment %}
+        <div class="detail-text-block_item">
+            <p style="font-size: 14px; color: #282E33;">To leave a review on this website, you need to register and log in with your account.</p>
+    </div>
 
-
-           <!--  line-modile -->
-           <div class="custom-line"></div>
-           <!--  line-modile -->
-          
-
-            <!--  card -->
-            <div class="reviews-card">
-               <div class="reviews-img">
-                   <img src="{% static '/image/otziv2.jpg' %}" alt=""style="width: 130px; height: 130px; border-radius: 50%;  object-fit: cover;">
-               </div>
-               <div class="reviews-description">
-                   <h6>Professional guys invested on time</h6>
-               </div>
-           </div>
-           <!--  card -->
-
-           <!--  line-modile -->
-           <div class="custom-line"></div>
-           <!--  line-modile -->
-
-            <!--  card -->
-            <div class="reviews-card">
-               <div class="reviews-img">
-                   <img src="{% static '/image/otziv3.jpg' %}" alt=""style="width: 130px; height: 130px; border-radius: 50%;  object-fit: cover;">
-               </div>
-               <div class="reviews-description">
-                   <h6>Fast flooring install, great</h6>
-               </div>
-           </div>
-           <!--  card -->
-
-       </div>
-    </section>
-   
-
-{% endblock %}
+    
+{% endblock%}    

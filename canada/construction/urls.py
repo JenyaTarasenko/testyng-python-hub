@@ -10,9 +10,12 @@ app_name = 'construction'
 urlpatterns = [
   
     path('', views.submith_question, name='index'),
+    path('register/', views.register, name='register'),# регистрация
+    path('login/', views.login_view, name='login'),# login
     path('category-detail-page/', views.category_list, name="category_list"), #все категории
     path('projects-all/', views.project_all, name="projects_all"), #все проекты
-    path('project/<slug:slug>/',views.ProjectDetailView.as_view(), name='project_detail'),
+    # path('project/<slug:slug>/',views.ProjectDetailView.as_view(), name='project_detail'),
+    path('detail/<slug:slug>/', views.project_detail, name='project_detail'),# регистрация
     path('category-detail/<slug:slug>/', views.category_detail, name="category_detail"),
     path('diverse/', TemplateView.as_view(template_name="app/pages/questions.html"), name="questions"), #для статических страничек сайта diverse
     path('about/', TemplateView.as_view(template_name="app/pages/about.html"), name="about"), #для статических страничек сайта about 

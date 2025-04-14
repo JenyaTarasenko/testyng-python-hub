@@ -1865,6 +1865,7 @@ input::placeholder {
     font-weight: 200;
     font-size: 18px;
     color: #282E33;
+   
 
 
 }
@@ -1913,9 +1914,9 @@ input::placeholder {
 
 .flag-canada {
 
-    background-image: url(./image/logo-about.png);
-    width: 300px;
-    height: 300px;
+    background-image: url(./image/logo2-new.png);
+    width: 200px;
+    height: 200px;
     display: flex;
     align-items: center;
     background-size: cover;
@@ -2436,5 +2437,111 @@ input::placeholder {
 
     margin-top: 40px;
 
+
+}
+
+.review-text-items {
+
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 20px;
+    letter-spacing: 2px;
+    color: #9e9e9e;
+    font-family: "Inter", sans-serif;
+
+}
+.container-text-review h6 {
+
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    letter-spacing: 1px;
+    color: #65676b;
+    font-family: "Inter", sans-serif;
+
+}
+textarea.form-control {
+    border-radius: 30px;
+}    
+
+form .form-control {
+  border-radius: 8px; /* Скругление углов */
+  padding: 12px;      /* Отступы внутри поля */
+  font-size: 14px;    /* Размер текста */
+  color: #5d5d5d;        /* Цвет текста */ /* Светлый фон */
+  border: 1px solid #ccc;  /* Цвет рамки */
+}
+
+.form-control {
+    border-radius: 5px;  /* Радиус для всех полей */
+    padding: 10px;  /* Внутренние отступы */
+    width: 100%;  /* Поля на всю ширину контейнера */
+}
+
+form .form-password-label {
+    font-size: 14px;
+    color: #575757; /* Цвет для метки пароля */
+}
+.form-text-controll {
+
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    letter-spacing: 1px;
+    color: #65676b;
+    font-family: "Inter", sans-serif;
+
+
+}
+.custom-width {
+
+    border-radius: 5px;
+    height: 40px;
+
+
+}
+input.form-control {
+    width: 100%;
+    max-width: 500px;
+    height: 50px;
+}
+.card-title-review {
+
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    letter-spacing: 1px;
+    color: #1e1e1e;
+    font-family: "Inter", sans-serif;
+
+
+}
+.card-text-review {
+
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 1px;
+    color: #0f0e0e;
+    font-family: "Inter", sans-serif;
+    text-align: left !important;
+
+
+
+}
+
+
+.card.fixed-card.card-review {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+  
+  .card.fixed-card.card-review:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+  
+.card-review  {
+
+    border: 1px solid #E77B2D;
 
 }

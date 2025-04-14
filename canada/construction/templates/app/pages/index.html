@@ -139,38 +139,16 @@
                             <p>Team of professionals with years of experience, delivering top-notch flooring solutions</p>
                         </div>
                     </div>
-    
-                {% comment %} <!--  карта фильтруем первые 3 категории -->
-                {% for category in categories|slice:":3"  %}     
-                    <div class="service-card">
-                        <div class="service-card_items">
-
-                            <p>{{ category.name|truncatechars:20 }}</p>
-                            <img src="{% static '/image/service-logo.png' %}" alt="service-logo">
-                        </div>
-                        <div class="service-card_description">
-                            <p>{{ category.description|truncatewords:8 }}</p>
-    
-                        </div>
-                    </div>
-                {% endfor%}
-                <!--  карта фильтруем первые 3 категории -->     
-                    
-                    
-     {% endcomment %}
-    
                 </div>
     
                 <div class="service-btn-conteiner">
                    <a href="{% url 'construction:category_list' %}"><button class="service-btn">See all services</button></a> 
                 </div>
-    
             </div>
-    
         </section>
         <!--  секция главный service -->
-    
         <!--  секция главный Showroom -->
+        
         <section class="showroom">
             <div class="showroom-conteiner">
                 <!--  текст блочный -->
@@ -187,97 +165,66 @@
                 <div class="showroom-conteiner_card">
     
                     <!--  card -->
-                  
-
                     {% for project in project_item|slice:":4" %}  
-                    
-                    <a href="{% url "construction:project_detail" project.slug %}" class="project-href">
+                        <a href="{% url "construction:project_detail" project.slug %}" class="project-href">
 
-                        <div class="showroom-card" style="background-image:url('{{ project.image.url }}');" alt="{{ project.name }}">
-                        
-                            <div class="card-conteiner">
-                                <div class="showroom-item">
-                                    <h5>{{project.name|truncatewords:6 }}</h5>
-                                </div>
-                                <div class="showroom-description">
-                                    <p>{{project.description|truncatewords:12 }}</p>
+                            <div class="showroom-card" style="background-image:url('{{ project.image.url }}');" alt="{{ project.name }}">
+                            
+                                <div class="card-conteiner">
+                                    <div class="showroom-item">
+                                        <h5>{{project.name|truncatewords:6 }}</h5>
+                                    </div>
+                                    <div class="showroom-description">
+                                        <p>{{project.description|truncatewords:12 }}</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </a>    
+                        </a>    
                     {% endfor %}  
-                    
-                    
-                       
                     <!--  card -->  
-    
                 </div>
-               
+        </section>
+        {% include 'include/form/form.html' %}
+        <section>
+            <div class="text-service__block">
+                <div class="text-block">
+                    <h4>Customer Reviews</h4>
+                </div>
+                <div class="text-block_item-showroom">
+                    <p>Here are collected reviews from our clients</p>
+                </div>
+            </div>
         </section>
         <!--  секция главный Showroom -->
-    
-        <!--  секция главный reviews-->
-        <section class="reviews">
-             <!--  текст блочный -->
-             <div class="text-service__block-reviews">
-                <div class="text-block_item-reviews">
-                    <p>Our satisfied customers</p>
+        <section class="reviwes mt-5 mb-4">
+            <div class="container">
+                <div class="row align-items-center justify-content-center gap-2">
+                   {% if  reviews %} 
+                        {% for review in reviews %}
+                                <div class="card fixed-card card-review" style="width: 300px; height: 300px; border-radius: 30px; border: 1px solid #FF9500;">
+                                    <div class="card-body text-left d-flex flex-column justify-content-start align-items-start px-1">
+                                        <!-- Изображение -->
+                                        <img src="{% static './image/man2.png' %}" class="card-img-top mt-3" alt="Image" style="height: 50px; width: 50px;">
+                                    
+                                        <!-- Имя -->
+                                        <h5 class="card-title-review mt-2 text-left">{{ review.user.username }}</h5>
+                                        <img src="{% static './image/stars.png' %}" class="card-img-bottom" alt="Image" style="width: 100px;">
+                                    
+                                        <!-- Текст отзыва -->
+                                        <p class="card-text-review mt-2">{{ review.content|slice:":150" }}</p>
+                                    </div>
+                                </div>
+                        {% endfor %}
+                    {% else %}
+                        <p class="text-center text-muted mt-4">There are no reviews yet.</p>
+                    {% endif%}
                 </div>
             </div>
-            <!--  текст блочный -->
+        </section> 
     
-            <div class="reviews-conteiner">
-    
-                 <!--  card -->
-                <div class="reviews-card">
-                    <div class="reviews-img">
-                        <img src="{% static '/image/reviews-1.png' %}" alt="">
-                    </div>
-                    <div class="reviews-description">
-                        <h6>It was important to meet the deadlines, but the guys managed everything</h6>
-                    </div>
-                   
-                </div>
-                <!--  card -->
-    
-    
-                <!--  line-modile -->
-                <div class="custom-line"></div>
-                <!--  line-modile -->
-               
-    
-                 <!--  card -->
-                 <div class="reviews-card">
-                    <div class="reviews-img">
-                        <img src="{% static '/image/reviews-2.png' %}" alt="">
-                    </div>
-                    <div class="reviews-description">
-                        <h6>A lot of work was done, all on time, very high quality</h6>
-                    </div>
-                </div>
-                <!--  card -->
-    
-                <!--  line-modile -->
-                <div class="custom-line"></div>
-                <!--  line-modile -->
-    
-                 <!--  card -->
-                 <div class="reviews-card">
-                    <div class="reviews-img">
-                        <img src="{% static '/image/reviews-3.png' %}" alt="">
-                    </div>
-                    <div class="reviews-description">
-                        <h6>Very high quality work, good specialists</h6>
-                    </div>
-                </div>
-                <!--  card -->
-    
-            </div>
-        </section>
-        <!--  секция главный reviews -->
 
         
-        {% include 'include/form/form.html' %}
+       
       
         <script>
             document.addEventListener('DOMContentLoaded', function() {

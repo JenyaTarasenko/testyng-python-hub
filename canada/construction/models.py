@@ -67,3 +67,20 @@ class ProjectImage(models.Model):
     
     def __str__(self):
         return f"Изображение для {self.project.name}"    
+    
+    
+    
+    
+class Review(models.Model):
+    project = models.ForeignKey('Project', on_delete=models.CASCADE, related_name='reviews', verbose_name="Проект")
+    user = models.ForeignKey('auth.User', on_delete=models.CASCADE, verbose_name="Пользователь")
+    content = models.TextField(verbose_name="Содержание отзыва")
+    is_published = models.BooleanField(default=True, verbose_name="Опубликовано")
+    
+    
+    def __str__(self):
+        if self.user:
+            return f"{self.user.first_name}{self.user.username}"
+        else:
+            return f"Нет пользователя"
+      

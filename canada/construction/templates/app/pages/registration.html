@@ -1,0 +1,93 @@
+{% extends "app/base.html" %}
+{% load static %}
+{% block title %}Flooring Installation Toronto{% endblock %}
+{% block content %}
+
+    {% comment %} 
+        <h2>Регистрация</h2>
+            <form method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Зарегистрироваться</button>
+            </form> 
+
+        <a href="{% url "construction:login" %}"><h4>Ввести логин</h4>  </a>  
+
+    {% endcomment %}
+
+    <section>
+        <div class="container">
+          <div class="row justify-content-center align-items-center" style="min-height: 100vh; margin-top: 200px;">  <!-- vh = высота экрана -->
+      
+            <div class="col-md-6">  <!-- Центрирование и ограничение ширины -->
+              <form method="POST" class="p-4  rounded  w-100">
+                {% csrf_token %}
+      
+                <!-- First name -->
+                <div class="mb-3">
+                    {% comment %} <label for="{{ form.first_name.id_for_label }}" class="form-password-label">First name</label> {% endcomment %}
+                    <input type="text" name="first_name" class="form-field w-100" id="first_name" placeholder="First name">
+                    {% comment %} {{ form.first_name }} {% endcomment %}
+                    {% if form.first_name.errors %}
+                        <div class="text-danger small">{{ form.first_name.errors }}</div>
+                    {% endif %}
+                </div>
+      
+                <!-- Username -->
+                <div class="mb-3">
+                    {% comment %} <label for="{{ form.username.id_for_label }}" class="form-password-label">Username</label>
+                    {{ form.username }} {% endcomment %}
+                    <input type="text" name="username" class="form-field w-100" id="username" placeholder="Username">
+                    {% if form.username.errors %}
+                        <div class="text-danger small">{{ form.username.errors }}</div>
+                    {% endif %}
+                </div>
+      
+                <!-- Email -->
+                <div class="mb-3">
+                    {% comment %} <label for="{{ form.email.id_for_label }}" class="form-password-label">Email</label>
+                    {{ form.email }} {% endcomment %}
+                    <input type="text" name="email" class="form-field w-100" id="email" placeholder="Email">
+                    {% if form.email.errors %}
+                        <div class="text-danger small">{{ form.email.errors }}</div>
+                    {% endif %}
+                </div>
+      
+                <!-- Password -->
+                <div class="mb-3">
+                    {% comment %} <label for="{{ form.password.id_for_label }}" class="form-password-label">Password</label>
+                    {{ form.password }} {% endcomment %}
+                    <input type="text" name="password" class="form-field w-100" id="password" placeholder="Password">
+                    {% if form.password.errors %}
+                        <div class="text-danger small">{{ form.password.errors }}</div>
+                    {% endif %}
+                </div>
+      
+                <!-- Confirm password -->
+                <div class="mb-3">
+                    {% comment %} <label for="{{ form.confirm_password.id_for_label }}" class="form-password-label">Please enter your password again</label>
+                    {{ form.confirm_password }} {% endcomment %}
+                    <input type="text" name="confirm_password" class="form-field w-100" id="confirm_password" placeholder="Please enter your password again">
+                    {% if form.confirm_password.errors %}
+                        <div class="text-danger small">{{ form.confirm_password.errors }}</div>
+                    {% endif %}
+                </div>
+      
+                <button type="submit" class="home-btn w-100">Register</button>
+              </form>
+      
+              <div class="mt-3 text-center">
+                <a href="{% url 'construction:login' %}" class="text-decoration-none">
+                  <h5>Already have an account? Login</h5>
+                </a>
+                <h5 class="form-text-controll">After registration, go to the login menu item and enter your login</h5>
+              </div>
+            </div>
+      
+          </div>
+        </div>
+    </section>
+      
+      
+{% endblock%}    
+    
