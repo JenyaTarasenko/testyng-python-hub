@@ -39,28 +39,32 @@
 
     <section class="detail-card">
         <div class="card-conteiner-items">
-
-        <!-- карта -->
-        {% for project in projects %} 
-            <a href="{% url "construction:project_detail" project.slug %}"class="project-href">
-                
-                <div class="card-detail__conteiner">
-                    <div class="detail-image_card">
-                    <img src="{{ project.image.url }}" alt="">
+            {% if projects %}
+                {% for project in projects %} 
+                    <a href="{% url "construction:project_detail" project.slug %}"class="project-href">
+                        
+                        <div class="card-detail__conteiner">
+                            <div class="detail-image_card">
+                                <img src="{{ project.image.url }}" alt="">
+                            </div>
+                            <img src="{% static '/image/down-line.png' %}" alt="Круг" class="circle"> <!-- Картинка круга -->
+                            <div class="detail-text_card">
+                                <h4>{{ project.name }}</h4>
+                            </div>
+                            <div class="detail-text_card-description">
+                                <p>{{ project.description|truncatewords:12  }}</p>
+                            </div>
+                        </div>
+                    </a>
+                {% endfor %}
+            {% else  %}  
+                <div class="detail-text-service__block">
+                    <div class="detail-text-block_item">
+                        <p style="color:#E77B2D; font-size: 30px">There are no projects in this category yet.</p>
                     </div>
-                    <img src="{% static '/image/down-line.png' %}" alt="Круг" class="circle"> <!-- Картинка круга -->
-                    <div class="detail-text_card">
-                    <h4>{{ project.name }}</h4>
-                    </div>
-                    <div class="detail-text_card-description">
-                    <p>{{ project.description|truncatewords:12  }}</p>
-                    </div>
-                </div>
-            </a>
-        {% endfor %}
+                </div>  
+            {% endif %}  
         
-
-
         </div>
     </section>
 <!-- секция card -->
@@ -110,69 +114,4 @@
         </div>
     </section>
     <!--  new-page-style -->
-
-    <section class="reviews" style="background-color:transparent;">
-        <!--  текст блочный -->
-        <div class="text-service__block-reviews">
-           <div class="text-block_item-reviews">
-               <p>Our satisfied customers</p>
-           </div>
-       </div>
-       <!--  текст блочный -->
-
-       <div class="reviews-conteiner">
-
-            <!--  card -->
-           <div class="reviews-card">
-               <div class="reviews-img">
-                   <img src="{% static '/image/otziv4.jpg' %}" alt="" style="width: 130px; height: 130px; border-radius: 50%;  object-fit: cover;">
-               </div>
-               <div class="reviews-description" srtle="text-align: left">
-                   <h6>The best flooring specialists in Toronto did a lot of work</h6>
-               </div>
-              
-           </div>
-           <!--  card -->
-
-
-           <!--  line-modile -->
-           <div class="custom-line"></div>
-           <!--  line-modile -->
-          
-
-            <!--  card -->
-            <div class="reviews-card">
-               <div class="reviews-img">
-                   <img src="{% static '/image/otziv6.jpg' %}" alt=""style="width: 130px; height: 130px; border-radius: 50%;  object-fit: cover;">
-               </div>
-               <div class="reviews-description">
-                   <h6>Fast and high-quality work, the floors were done very well</h6>
-               </div>
-           </div>
-           <!--  card -->
-
-           <!--  line-modile -->
-           <div class="custom-line"></div>
-           <!--  line-modile -->
-
-            <!--  card -->
-            <div class="reviews-card">
-               <div class="reviews-img">
-                   <img src="{% static '/image/otziv5.jpg' %}" alt=""style="width: 130px; height: 130px; border-radius: 50%;  object-fit: cover;">
-               </div>
-               <div class="reviews-description">
-                   <h6>Top quality, best in the business</h6>
-               </div>
-           </div>
-           <!--  card -->
-
-       </div>
-    </section>
-
-  
-
-  
-
-
-
 {% endblock %}
