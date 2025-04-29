@@ -55,7 +55,6 @@ TEMPLATES = [
     {   'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -149,7 +148,7 @@ TELEGRAM_BOT_TOKEN = "7515498927:AAFmVre9UZruTG6dn2edZCSnENU_hL2GaHU"
 TELEGRAM_CHAT_ID = 530704410
 ####### telegram-bot ######
 
-ALLOWED_HOSTS = ['Bonderenko.pythonanywhere.com','localhost', '127.0.0.1']
+# ALLOWED_HOSTS = ['Bonderenko.pythonanywhere.com','localhost', '127.0.0.1']
 
 
 
@@ -163,3 +162,13 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 # Медиафайлы
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+
+
+SITE_URL = 'https://www.pro-floor-installers.com'
+ALLOWED_HOSTS = ['pro-floor-installers.com', 'www.pro-floor-installers.com', '127.0.0.1', 'localhost']
+
+DEBUG = False
+SECURE_SSL_REDIRECT = True 
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
