@@ -4,15 +4,15 @@
     <div class="head_navigator" style="position: absolute; top: 0; left: 0; right: 0; z-index: 100;">
         <div class="top-head"> 
             <div class="conteiner-top-head">
-                <div class="top-header_items">
-                    <a href=""><img src="{% static 'image/icon-facebook.png' %}" alt="facebook" style="width: 40px; height: 40px;"></a>
-                    <a href=""><img src="{% static 'image/instagram.png' %}" alt="instagram"></a>
+                <div class="top-header_items d-flex flex-row gap-3">
+                    <a href=""><img src="{% static 'image/icon-facebook.png' %}" alt="facebook" style="width: 30px; height: 30px;"></a>
+                    <a href=""><img src="{% static 'image/instagram.png' %}" alt="instagram" style="width: 28px; height: 28px;"></a>
                 </div>
                 <div class="top-header_logo">
-                    <a href="{% url 'construction:index' %}"><img src="{% static 'image/new-logo.png' %}" alt="logo" class="top-header_logo-img"></a>
+                    <a href="{% url 'construction:index' %}"><img src="{% static 'image/logo-white.png' %}" alt="logo" class="top-header_logo-img"></a>
                 </div>
                 <div class="top-header_telephone">
-                    <a href=""><img src="{% static 'image/tel.png' %}" alt="facebook"></a>
+                    <a href=""><img src="{% static 'image/tel.png' %}" alt="facebook" style="width: 30px; height: 30px;"></a>
                     <a href="tel:+14162949948" class="telephone-header">+14162949948</a>
                 </div>
             </div>
@@ -28,7 +28,7 @@
             <div class="container">
                 <!-- Логотип -->
                 <a class="navbar-brand d-lg-none" href="{% url 'construction:index' %}">
-                    <img src="{% static 'image/new-logo.png' %}" alt="logo" style="width: 100px;">
+                    <img src="{% static 'image/logo-white.png' %}" alt="logo" style="width: 100px;">
                 </a>
             
                 <!-- Кнопка бургер-меню -->

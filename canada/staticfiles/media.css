@@ -505,9 +505,15 @@
     }
 
 }
+@media (max-width: 619px) {
+    .flag-conteiner  {
+
+        display: none;
+    }
+}
 
 @media (max-width: 560px) {
-   
+ 
     .detail-image__conteiner{
 
         background-image:url(./image/showroom-mob.png);

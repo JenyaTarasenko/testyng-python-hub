@@ -1806,7 +1806,10 @@ input::placeholder {
 
     width: 40px;
     height: 40px;
+}
+.new-style-social {
 
+    display: none;
 
 }
 
@@ -1914,9 +1917,9 @@ input::placeholder {
 
 .flag-canada {
 
-    background-image: url(./image/logo2-new.png);
-    width: 200px;
-    height: 200px;
+    background-image: url(./image/logo-black.png);
+    width: 300px;
+    height: 100px;
     display: flex;
     align-items: center;
     background-size: cover;
@@ -2544,4 +2547,8 @@ input.form-control {
 
     border: 1px solid #E77B2D;
 
+}
+.footer-container-top {
+
+    margin-top: 40px;
 }
