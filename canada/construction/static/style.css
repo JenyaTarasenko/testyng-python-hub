@@ -1800,7 +1800,9 @@ input::placeholder {
 .new-style-avatar img {
 
     width: 125px;
-    height: 125px;
+    height: 160px;
+    object-fit: cover;
+    border-radius:30px;
 }
 .new-style-social img{
 
@@ -2551,4 +2553,9 @@ input.form-control {
 .footer-container-top {
 
     margin-top: 40px;
+}
+
+.form-review {
+
+    padding: 30px;
 }

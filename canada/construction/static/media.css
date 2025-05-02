@@ -595,9 +595,13 @@
         align-items: center;
         justify-content: center;
     }
+    .conteiner-avatar {
+
+        margin-top: -40px;
+    }
     .new-style-avatar img {
-        width: 75px;
-        height: 75px;
+        width: 100px;
+        height: 130px;
     }  
     .new-style-social img {
         width: 20px;
