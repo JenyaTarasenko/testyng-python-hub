@@ -118,45 +118,200 @@
     </script>
 {% endblock %}
 {% block content %}
-    <!--  new-page -->
-    <section class="new-page">
-        <div class="new-page-image"></div>
-    </section>
-    <section "question-text" style="margin-top: 40px;">
-        <div class="container">
-            <div class="row">
-                
-                <div class="text-service__block">
-                    <div class="text-block">
-                        <h4>Common Questions</h4>
-                    </div>
-                </div>
-                <div class="col-12 p-3 p-md-4 new-item">
-                    <p><strong style="font-weight: 900;">How to Order from Us</strong> 1 Call Us – Reach out by phone using the contact numbers listed on our website.2 Fill Out the Form – Complete the contact form on our site, and we'll get back to you as soon as possible.3 Send Us a Message – Click on the chat widget on the right side of the screen to send us a message directly.</p>
-                </div>
-                <div class="col-12 p-3 p-md-4 new-item">
-                    <p><strong style="font-weight: 900;">Where We Operate</strong>We proudly operate in Toronto, the vibrant heart of Canada, and its surrounding suburbs. Whether you're located in the city or in the nearby areas, we’re here to provide our services with the same level of dedication and expertise.</p>
-                </div>
-                <div class="col-12 p-3 p-md-4 new-item">
-                    <p><strong style="font-weight: 900;">Multitude of Clients</strong> Countless happy clients trust us for exceptional flooring across Toronto.</p>
-                </div>
-                <div class="col-12 p-3 p-md-4 new-item">
-                    <p><strong style="font-weight: 900;">Project Completion Time</strong> The timeline for completing projects varies depending on the complexity and specific requirements. Each project is unique, and we tailor our approach to ensure the best results. However, our team is committed to delivering high-quality projects in a timely manner, ensuring efficiency without compromising on excellence.</p>
-                </div>
-                <div class="col-12 p-3 p-md-4 new-item">
-                    <p><strong style="font-weight: 900;">Materials</strong> Our team works exclusively with high-quality, certified materials to ensure long-lasting durability and optimal performance of your flooring. We prioritize the best materials for every project to guarantee excellent results and longevity.</p>
-                </div>
-                <div class="col-12 p-3 p-md-4 new-item">
-                    <p><strong style="font-weight: 900;">About Our Team</strong>We are the Flooring Installation Toronto team, a group of professionals with extensive experience in the Canadian market. Having worked on various projects of all complexities, from simple to highly intricate ones, we have developed our own strategies and utilize advanced technologies to ensure the efficiency and speed of our work.</p>
-                </div>
-               
-                <!--  текст блочный -->
-            </div>
-        </div>
-    </section>
-    <!--  new-page-text-->
-    <!--  new-page-style -->
-    <section class="new-style">
+  <!--  new-page -->
+
+    <!-- главный экран -->
+<section class="relative min-h-screen w-full overflow-hidden mt-20">
+    <!-- Фоновое изображение -->
+    <img
+        src="{% static 'image/question.webp' %}"
+        alt="Flooring installation in Toronto"
+        class="absolute inset-0 h-full w-full object-cover"
+    >
+
+    <!-- Затемнение для читаемости текста -->
+    <div class="absolute inset-0 bg-black/40"></div>
+
+    <!-- Текст в левом верхнем углу -->
+    <div class="absolute left-6 top-8 z-10 max-w-2xl text-white md:left-12 md:top-12 lg:left-20 lg:top-16 mt-20">
+        <p class="mb-4 text-xs font-normal tracking-[0.2em] text-gray-300 font-inter md:text-base">
+            Flooring Installation in Toronto
+        </p>
+
+        <h1 class="mb-6 text-2xl font-bold leading-tight md:text-6xl lg:text-7xl font-montserrat">
+            Frequently <span class="block text-[#FF9500]"> Asked <span class="font-normal">Questions</span></span>
+        </h1>
+
+        <h2 class="max-w-xl text-base leading-relaxed text-white/90 md:text-md">
+            Find answers about flooring installation in Toronto, including costs, timelines, materials, and maintenance. We offer professional advice and free on-site measurements for residential and commercial projects.
+        </h2>
+
+        <a
+            href="https://wa.me/14162949948?text=Hello%2C%20I%20am%20a%20flooring%20specialist%20in%20Toronto%2C%20how%20can%20I%20help%3F" target="_blank" aria-label="WhatsApp" 
+            class="mt-8 inline-flex items-center justify-center rounded-full bg-[#FF9500] px-8 py-4 text-sm font-semibold text-white transition duration-300 hover:scale-105 hover:bg-[#E68600] active:scale-95 sm:text-base"
+        >
+            Get a Free Quote
+        </a>
+    </div>
+</section>
+<!-- главный экран -->
+ <section class="px-4 sm:px-6 lg:px-8 py-10">
+    <div class="max-w-4xl mx-auto text-center">
+        <p class="text-base sm:text-lg leading-7 text-gray-700">
+            We provide professional flooring installation in Toronto and surrounding areas. Contact us by phone, through our contact form, or website chat to get a free on-site estimate. Our experienced team works with high-quality materials and handles projects of all sizes. Installation time depends on the flooring type, project size, and complexity. We focus on quality workmanship, durability, and customer satisfaction.
+        </p>
+    </div>
+</section>
+
+<!-- кнопка по середине -->
+ <section class="items-center justify-center text-center mb-10">
+    <a
+        href="https://wa.me/14162949948?text=Hello%2C%20I%20am%20a%20flooring%20specialist%20in%20Toronto%2C%20how%20can%20I%20help%3F" target="_blank" aria-label="WhatsApp" 
+        class="mt-8 inline-flex items-center justify-center rounded-full bg-[#FF9500] px-8 py-4 text-sm font-semibold text-white transition duration-300 hover:scale-105 hover:bg-[#E68600] active:scale-95 sm:text-base"
+    >
+        Get a Free Quote
+    </a>
+ </section>
+<!-- кнопка по середине -->
+
+<!-- слайдер -->
+<section class="relative h-[400px] w-full overflow-hidden sm:h-[500px] lg:h-[650px]"
+         aria-label="Our projects">
+
+    <!-- Слайды -->
+    <div class="slider-slide absolute inset-0 opacity-100 transition-opacity duration-1000">
+        <img
+            src="{% static 'image/slaider1.webp' %}"
+            alt="Flooring installation project"
+            class="h-full w-full object-cover"
+        >
+    </div>
+
+    <div class="slider-slide absolute inset-0 opacity-0 transition-opacity duration-1000">
+        <img
+            src="{% static 'image/slaider2.webp' %}"
+            alt="Modern flooring project"
+            class="h-full w-full object-cover"
+        >
+    </div>
+
+    <div class="slider-slide absolute inset-0 opacity-0 transition-opacity duration-1000">
+        <img
+            src="{% static 'image/slaider3.webp' %}"
+            alt="Professional flooring services"
+            class="h-full w-full object-cover"
+        >
+    </div>
+     <div class="slider-slide absolute inset-0 opacity-0 transition-opacity duration-1000">
+        <img
+            src="{% static 'image/slaider4.webp' %}"
+            alt="Professional flooring services"
+            class="h-full w-full object-cover"
+        >
+    </div>
+      <div class="slider-slide absolute inset-0 opacity-0 transition-opacity duration-1000">
+        <img
+            src="{% static 'image/slaider5.webp' %}"
+            alt="Professional flooring services"
+            class="h-full w-full object-cover"
+        >
+    </div>
+      <div class="slider-slide absolute inset-0 opacity-0 transition-opacity duration-1000">
+        <img
+            src="{% static 'image/slaider6.webp' %}"
+            alt="Professional flooring services"
+            class="h-full w-full object-cover"
+        >
+    </div>
+      <div class="slider-slide absolute inset-0 opacity-0 transition-opacity duration-1000">
+        <img
+            src="{% static 'image/slaider7.webp' %}"
+            alt="Professional flooring services"
+            class="h-full w-full object-cover"
+        >
+    </div>
+      <div class="slider-slide absolute inset-0 opacity-0 transition-opacity duration-1000">
+        <img
+            src="{% static 'image/slaider8.webp' %}"
+            alt="Professional flooring services"
+            class="h-full w-full object-cover"
+        >
+    </div>
+      <div class="slider-slide absolute inset-0 opacity-0 transition-opacity duration-1000">
+        <img
+            src="{% static 'image/slaider9.webp' %}"
+            alt="Professional flooring services"
+            class="h-full w-full object-cover"
+        >
+    </div>
+     <div class="slider-slide absolute inset-0 opacity-0 transition-opacity duration-1000">
+        <img
+            src="{% static 'image/slaider10.webp' %}"
+            alt="Professional flooring services"
+            class="h-full w-full object-cover"
+        >
+    </div>
+     <div class="slider-slide absolute inset-0 opacity-0 transition-opacity duration-1000">
+        <img
+            src="{% static 'image/slaider11.webp' %}"
+            alt="Professional flooring services"
+            class="h-full w-full object-cover"
+        >
+    </div>
+     <div class="slider-slide absolute inset-0 opacity-0 transition-opacity duration-1000">
+        <img
+            src="{% static 'image/slaider12.webp' %}"
+            alt="Professional flooring services"
+            class="h-full w-full object-cover"
+        >
+    </div>  
+     <!-- Затемнение -->
+    <div class="absolute inset-0 z-[1] bg-black/40"></div>
+
+    <!-- Постоянный текст поверх слайдов -->
+    <div class="absolute inset-0 z-10 flex flex-col items-center justify-center px-5 text-center text-white">
+
+        <h4 class="max-w-4xl font-montserrat text-3xl font-bold sm:text-5xl lg:text-6xl">
+            Transform Your <span class="text-[#FF9500]">Space</span> with <span class="text-[#FF9500] font-normal"><strong style="font-weight: bold;">Expert Flooring</strong></span>
+        </h4>
+
+        <p class="mt-5 max-w-2xl text-bold sm:text-xl font-inter">
+            Professional flooring installation in Toronto.
+            Quality craftsmanship and beautiful results built to last.
+        </p>
+
+        <a
+            href="{% url 'construction:index' %}#form"
+            class="mt-8 inline-flex items-center justify-center rounded-full bg-[#FF9500] px-8 py-4 text-sm font-semibold text-white transition duration-300 hover:scale-105 hover:bg-[#E68600] active:scale-95 sm:text-base"
+        >
+            Get a Free Estimate
+        </a>
+
+    </div>
+
+</section>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const slides = document.querySelectorAll('.slider-slide');
+
+    if (slides.length < 2) return;
+
+    let currentSlide = 0;
+
+    setInterval(() => {
+        slides[currentSlide].classList.remove('opacity-100');
+        slides[currentSlide].classList.add('opacity-0');
+
+        currentSlide = (currentSlide + 1) % slides.length;
+
+        slides[currentSlide].classList.remove('opacity-0');
+        slides[currentSlide].classList.add('opacity-100');
+    }, 5000);
+});
+</script>
+<!-- слайдер -->
+ <section class="new-style mt-10 mb-10">
         <div class="new-style-man">
         
             <!--  аватарка -->
@@ -193,7 +348,6 @@
         
         </div>
     </section>
-    <!--  new-page-style -->
 
 {% endblock%} 
     

@@ -14,6 +14,43 @@ from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login
 from django.core.paginator import Paginator
 
+from django.http import HttpResponse
+
+
+def llms_txt(request):
+    content = """# Pro Floor Installers
+
+> Professional flooring installation services in Toronto, Ontario, Canada.
+
+## Main Pages
+
+- https://www.pro-floor-installers.com/
+- https://www.pro-floor-installers.com/about/
+- https://www.pro-floor-installers.com/diverse/
+
+## Flooring Services
+
+- https://www.pro-floor-installers.com/hardwood-flooring/
+- https://www.pro-floor-installers.com/laminate-flooring/
+- https://www.pro-floor-installers.com/vinyl-flooring/
+
+## Contact
+
+Website: https://www.pro-floor-installers.com/
+WhatsApp: https://wa.me/14162994948?text=Hello%2C%20I%20am%20a%20flooring%20specialist%20in%20Toronto%2C%20how%20can%20I%20help%3F
+Phone: +1 416 299 4948
+"""
+    return HttpResponse(content, content_type="text/plain; charset=utf-8")
+
+
+def robots_txt(request):
+    content = """User-agent: *
+Allow: /
+
+Sitemap: https://www.pro-floor-installers.com/sitemap.xml
+"""
+    return HttpResponse(content, content_type="text/plain")
+
 #страница все паркетные работы
 def hardwood(request):
 

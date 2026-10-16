@@ -122,143 +122,42 @@
     <!-- <section class="detail">
         <div class="detail-image__conteiner"></div>
     </section> -->
-<!-- слайдер -->
-<section class="relative h-[400px] w-full overflow-hidden sm:h-[500px] lg:h-[650px]"
-         aria-label="Our projects">
+<!-- главный экран -->
+<section class="relative min-h-screen w-full overflow-hidden mt-20">
+    <!-- Фоновое изображение -->
+    <img
+        src="{% static 'image/hardwood.webp' %}"
+        alt="Flooring installation in Toronto"
+        class="absolute inset-0 h-full w-full object-cover"
+    >
 
-    <!-- Слайды -->
-    <div class="slider-slide absolute inset-0 opacity-100 transition-opacity duration-1000">
-        <img
-            src="{% static 'image/slaider1.webp' %}"
-            alt="Flooring installation project"
-            class="h-full w-full object-cover"
-        >
-    </div>
+    <!-- Затемнение для читаемости текста -->
+    <div class="absolute inset-0 bg-black/40"></div>
 
-    <div class="slider-slide absolute inset-0 opacity-0 transition-opacity duration-1000">
-        <img
-            src="{% static 'image/slaider2.webp' %}"
-            alt="Modern flooring project"
-            class="h-full w-full object-cover"
-        >
-    </div>
-
-    <div class="slider-slide absolute inset-0 opacity-0 transition-opacity duration-1000">
-        <img
-            src="{% static 'image/slaider3.webp' %}"
-            alt="Professional flooring services"
-            class="h-full w-full object-cover"
-        >
-    </div>
-     <div class="slider-slide absolute inset-0 opacity-0 transition-opacity duration-1000">
-        <img
-            src="{% static 'image/slaider4.webp' %}"
-            alt="Professional flooring services"
-            class="h-full w-full object-cover"
-        >
-    </div>
-      <div class="slider-slide absolute inset-0 opacity-0 transition-opacity duration-1000">
-        <img
-            src="{% static 'image/slaider5.webp' %}"
-            alt="Professional flooring services"
-            class="h-full w-full object-cover"
-        >
-    </div>
-      <div class="slider-slide absolute inset-0 opacity-0 transition-opacity duration-1000">
-        <img
-            src="{% static 'image/slaider6.webp' %}"
-            alt="Professional flooring services"
-            class="h-full w-full object-cover"
-        >
-    </div>
-      <div class="slider-slide absolute inset-0 opacity-0 transition-opacity duration-1000">
-        <img
-            src="{% static 'image/slaider7.webp' %}"
-            alt="Professional flooring services"
-            class="h-full w-full object-cover"
-        >
-    </div>
-      <div class="slider-slide absolute inset-0 opacity-0 transition-opacity duration-1000">
-        <img
-            src="{% static 'image/slaider8.webp' %}"
-            alt="Professional flooring services"
-            class="h-full w-full object-cover"
-        >
-    </div>
-      <div class="slider-slide absolute inset-0 opacity-0 transition-opacity duration-1000">
-        <img
-            src="{% static 'image/slaider9.webp' %}"
-            alt="Professional flooring services"
-            class="h-full w-full object-cover"
-        >
-    </div>
-     <div class="slider-slide absolute inset-0 opacity-0 transition-opacity duration-1000">
-        <img
-            src="{% static 'image/slaider10.webp' %}"
-            alt="Professional flooring services"
-            class="h-full w-full object-cover"
-        >
-    </div>
-     <div class="slider-slide absolute inset-0 opacity-0 transition-opacity duration-1000">
-        <img
-            src="{% static 'image/slaider11.webp' %}"
-            alt="Professional flooring services"
-            class="h-full w-full object-cover"
-        >
-    </div>
-     <div class="slider-slide absolute inset-0 opacity-0 transition-opacity duration-1000">
-        <img
-            src="{% static 'image/slaider12.webp' %}"
-            alt="Professional flooring services"
-            class="h-full w-full object-cover"
-        >
-    </div>  
-     <!-- Затемнение -->
-    <div class="absolute inset-0 z-[1] bg-black/40"></div>
-
-    <!-- Постоянный текст поверх слайдов -->
-    <div class="absolute inset-0 z-10 flex flex-col items-center justify-center px-5 text-center text-white">
-
-        <h4 class="max-w-4xl font-montserrat text-3xl font-bold sm:text-5xl lg:text-6xl">
-            Transform Your <span class="text-[#FF9500]">Space</span> with <span class="text-[#FF9500] font-normal"><strong style="font-weight: bold;">Expert Flooring</strong></span>
-        </h4>
-
-        <p class="mt-5 max-w-2xl text-bold sm:text-xl font-inter">
-            Professional flooring installation in Toronto.
-            Quality craftsmanship and beautiful results built to last.
+    <!-- Текст в левом верхнем углу -->
+    <div class="absolute left-6 top-8 z-10 max-w-2xl text-white md:left-12 md:top-12 lg:left-20 lg:top-16 mt-20">
+        <p class="mb-4 text-xs font-normal tracking-[0.2em] text-gray-300 font-inter md:text-base">
+            Flooring Installation in Toronto
         </p>
 
+        <h1 class="mb-6 text-2xl font-bold leading-tight md:text-6xl lg:text-7xl font-montserrat">
+            Flooring 
+            <span class="block text-[#FF9500]">Projects</span> Showcase
+        </h1>
+
+        <h2 class="max-w-xl text-base leading-relaxed text-white/90 md:text-md">
+            Explore the details of our flooring projects in Toronto and the surrounding areas, showcasing quality craftsmanship, professional installation, and attention to every detail.
+        </h2>
+
         <a
-            href="{% url 'construction:index' %}#form"
+            href="https://wa.me/14162949948?text=Hello%2C%20I%20am%20a%20flooring%20specialist%20in%20Toronto%2C%20how%20can%20I%20help%3F" target="_blank" aria-label="WhatsApp" 
             class="mt-8 inline-flex items-center justify-center rounded-full bg-[#FF9500] px-8 py-4 text-sm font-semibold text-white transition duration-300 hover:scale-105 hover:bg-[#E68600] active:scale-95 sm:text-base"
         >
-            Get a Free Estimate
+            Get a Free Quote
         </a>
-
     </div>
-
 </section>
-
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-    const slides = document.querySelectorAll('.slider-slide');
-
-    if (slides.length < 2) return;
-
-    let currentSlide = 0;
-
-    setInterval(() => {
-        slides[currentSlide].classList.remove('opacity-100');
-        slides[currentSlide].classList.add('opacity-0');
-
-        currentSlide = (currentSlide + 1) % slides.length;
-
-        slides[currentSlide].classList.remove('opacity-0');
-        slides[currentSlide].classList.add('opacity-100');
-    }, 5000);
-});
-</script>
-<!-- слайдер -->
+<!-- главный экран -->
 
     <div class="detail-text-service__block">
         <div class="detail-text-block">
