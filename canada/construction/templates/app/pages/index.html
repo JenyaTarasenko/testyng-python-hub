@@ -1,7 +1,124 @@
 {% extends "app/base.html" %}
 {% load static %}
 {% block title %}Flooring Installation Toronto{% endblock %}
+
+{% block seo %}
+    <meta name="description" content="Looking for flooring installers in Toronto? ProFloor Installers offers hardwood, vinyl, laminate, linoleum, stairs and custom flooring installation. Contact us for a quote.">
+
+    <meta name="robots" content="index, follow, max-image-preview:large">
+
+    <meta name="author" content="ProFloor Installers">
+    <meta name="theme-color" content="#282E33">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="{{ request.scheme }}://{{ request.get_host }}{{ request.path }}">
+
+    <!-- Open Graph: Facebook, Messenger, social previews -->
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_CA">
+    <meta property="og:site_name" content="ProFloor Installers">
+    <meta property="og:title" content="Flooring Installation Toronto | ProFloor Installers">
+    <meta property="og:description" content="Professional flooring installation in Toronto. Hardwood, vinyl, laminate, linoleum and custom flooring solutions. Contact us for a quote.">
+    <meta property="og:url" content="{{ request.scheme }}://{{ request.get_host }}{{ request.path }}">
+    <meta property="og:image" content="{{ request.scheme }}://{{ request.get_host }}{% static 'image/hardwood.webp' %}">
+    <meta property="og:image:alt" content="Professional flooring installation by ProFloor Installers in Toronto">
+
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Flooring Installation Toronto | ProFloor Installers">
+    <meta name="twitter:description" content="Hardwood, vinyl, laminate and custom flooring installation in Toronto. Request a quote from ProFloor Installers.">
+    <meta name="twitter:image" content="{{ request.scheme }}://{{ request.get_host }}{% static 'image/hardwood.webp' %}">
+
+    <!-- Schema.org: Local business -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HomeAndConstructionBusiness",
+      "@id": "{{ request.scheme }}://{{ request.get_host }}/#business",
+      "name": "ProFloor Installers",
+      "url": "{{ request.scheme }}://{{ request.get_host }}{{ request.path }}",
+      "description": "ProFloor Installers provides flooring installation services in Toronto, Ontario, including hardwood, engineered wood, vinyl, laminate, linoleum, stairs, decorative borders and custom flooring solutions.",
+      "telephone": "+1-416-294-9948",
+      "email": "torontosergey62@gmail.com",
+      "image": "{{ request.scheme }}://{{ request.get_host }}{% static 'image/hardwood.webp' %}",
+      "logo": "{{ request.scheme }}://{{ request.get_host }}{% static 'image/logo-new.svg' %}",
+      "priceRange": "$$",
+      "areaServed": {
+        "@type": "City",
+        "name": "Toronto",
+        "containedInPlace": {
+          "@type": "AdministrativeArea",
+          "name": "Ontario, Canada"
+        }
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+1-416-294-9948",
+        "email": "torontosergey62@gmail.com",
+        "contactType": "customer service",
+        "availableLanguage": ["English"]
+      },
+      "sameAs": [
+        "https://wa.me/14162949948"
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Flooring Installation Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Hardwood Flooring Installation",
+              "description": "Hardwood and engineered wood flooring installation for residential and commercial interiors."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Vinyl Flooring Installation",
+              "description": "Vinyl plank and other vinyl flooring installation."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Laminate Flooring Installation",
+              "description": "Laminate flooring installation and finishing."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Linoleum Flooring Installation"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Stair Flooring Installation",
+              "description": "Flooring installation and finishing for stairs."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Custom Flooring, Patterns and Borders",
+              "description": "Custom flooring designs, decorative borders, chevron and herringbone patterns."
+            }
+          }
+        ]
+      }
+    }
+    </script>
+{% endblock %}
 {% block content %}
+
 
  
         <section class="home">
@@ -19,7 +136,7 @@
                             <h2>Premium Parquet, Vinyl, and Carpet Installations Tailored for You</h2>
                         </div>
                         <div class="home-button">
-                            <a href="#form"><button class="home-btn">consultation</button></a>
+                            <a href="#form"><button class="home-btn">Get a Free Quote</button></a>
                         </div>
                     </div>
     
@@ -40,7 +157,7 @@
                         <h2>Premium Parquet, Vinyl, and Carpet Installations Tailored for You</h2>
                     </div>
                     <div class="home-button">
-                        <a href="#form"><button class="home-btn">consultation</button></a>
+                        <a href="#form"><button class="home-btn"> Get a Free Quote</button></a>
                     </div>
                 </div>
     
@@ -92,12 +209,89 @@
             </div>
         </section>
         <!--  секция главный urban -->
+
+    <!-- цифры -->
+<section
+    x-data="{
+        started: false,
+        stats: [
+            { value: 5, suffix: '+', label: 'Years of Experience', description: 'Over 5 Years of Experience' },
+            { value: 200, suffix: '+', label: 'Projects Completed', description: 'More than 200 completed projects' },
+            { value: 100, suffix: '%', label: 'Satisfied Clients', description: 'Our Clients Recommend Us' },
+            { value: 3, suffix: '', label: 'Flooring Types', description: 'Laminate, Vinyl, Hardwood' }
+        ],
+        animate() {
+            if (this.started) return;
+            this.started = true;
+
+            this.stats.forEach((stat, index) => {
+                let current = 0;
+                const duration = 1600;
+                const steps = 50;
+                const increment = stat.value / steps;
+
+                const timer = setInterval(() => {
+                    current += increment;
+
+                    if (current >= stat.value) {
+                        current = stat.value;
+                        clearInterval(timer);
+                    }
+
+                    this.$refs['counter' + index].textContent =
+                        Math.floor(current) + stat.suffix;
+                }, duration / steps);
+            });
+        }
+    }"
+    x-intersect.once="animate()"
+    class="bg-white px-5 py-16 sm:px-8 lg:py-20"
+>
+    <div class="mx-auto grid max-w-7xl grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+
+        <template x-for="(stat, index) in stats" :key="stat.label">
+            <div class="group rounded-2xl bg-white p-7 text-center transition duration-300 hover:-translate-y-1 hover:border-[#FF9500] hover:shadow-xl">
+
+                <div
+                    class="mb-4 text-5xl font-bold tracking-tight text-[#FF9500] sm:text-6xl"
+                    x-ref="counter"
+                    x-init="$nextTick(() => $el.setAttribute('x-ref', 'counter' + index))"
+                    x-text="'0' + stat.suffix"
+                ></div>
+
+                <h3
+                    class="text-lg font-bold text-[#282E33] sm:text-xl font-montserrat"
+                    x-text="stat.label"
+                ></h3>
+
+                <p
+                    class="mt-3 text-sm leading-6 text-gray-500 font-inter"
+                    x-text="stat.description"
+                ></p>
+
+            </div>
+        </template>
+
+    </div>
+</section>
+<!-- цифры -->
+
+<!-- кнопка по середине -->
+ <section class="items-center justify-center text-center">
+    <a
+        href="https://wa.me/14162949948?text=Hello%2C%20I%20am%20a%20flooring%20specialist%20in%20Toronto%2C%20how%20can%20I%20help%3F" target="_blank" aria-label="WhatsApp" 
+        class="mt-8 inline-flex items-center justify-center rounded-full bg-[#FF9500] px-8 py-4 text-sm font-semibold text-white transition duration-300 hover:scale-105 hover:bg-[#E68600] active:scale-95 sm:text-base"
+    >
+        Get a Free Quote
+    </a>
+ </section>
+<!-- кнопка по середине -->
     
         <!--  секция главный service -->
-        <section class="service">
+        <!-- <section class="service">
             <div class="service-image">
     
-                <!--  текст блочный -->
+               
                 <div class="text-service__block">
                     <div class="text-block">
                         <h4>Services</h4>
@@ -106,7 +300,7 @@
                         <p>Our services and technologies</p>
                     </div>
                 </div>
-                <!--  текст блочный -->
+              
     
                 <div class="service-conteiner_card">
                     <div class="service-card">
@@ -145,13 +339,92 @@
                    <a href="{% url 'construction:category_list' %}"><button class="service-btn">See all services</button></a> 
                 </div>
             </div>
-        </section>
+        </section> -->
         <!--  секция главный service -->
         <!--  секция главный Showroom -->
+
+<!-- секция с категориями -->
+<section class="py-12">
+    <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 gap-5 md:grid-cols-3">
+
+            <!-- Card 1 -->
+            <a href="{% url 'construction:hardwood' %}"
+               class="group relative flex min-h-[320px] items-center overflow-hidden rounded-xl">
+
+                <img
+                    src="{% static 'image/hardwood.webp' %}"
+                    alt="Hardwood flooring installation"
+                    class="absolute inset-0 h-full w-full object-cover transition duration-700 group-hover:scale-105"
+                >
+
+                <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/45 to-transparent"></div>
+
+                <div class="relative z-10 max-w-[85%] p-6 text-left">
+                    <h3 class="mb-3 text-2xl font-bold text-white font-montserrat">
+                        <span class="text-orange-400">Hardwood</span> Flooring
+                    </h3>
+
+                    <p class="text-sm leading-6 text-white/90 font-montserrat">
+                        Chevron and herringbone patterns, brass inlays, custom and mosaic flooring, decorative borders, and hardwood staircases.
+                    </p>
+                </div>
+            </a>
+
+            <!-- Card 2 -->
+            <a href="{% url 'construction:vinyl' %}"
+               class="group relative flex min-h-[320px] items-center overflow-hidden rounded-xl">
+
+                <img
+                    src="{% static 'image/vinyl.webp' %}"
+                    alt="Vinyl flooring installation"
+                    class="absolute inset-0 h-full w-full object-cover transition duration-700 group-hover:scale-105"
+                >
+
+                <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/45 to-transparent"></div>
+
+                <div class="relative z-10 max-w-[85%] p-6 text-left">
+                    <h3 class="mb-3 text-2xl font-bold text-white font-montserrat">
+                        <span class="text-orange-400">Vinyl</span> Flooring
+                    </h3>
+
+                    <p class="text-sm leading-6 text-white/90 font-montserrat">
+                     Vinyl plank flooring, luxury vinyl tile, waterproof vinyl flooring, custom layouts, stair installations, decorative transitions, and precise edge detailing.
+                    </p>
+                </div>
+            </a>
+
+            <!-- Card 3 -->
+            <a href="{% url 'construction:laminate' %}"
+               class="group relative flex min-h-[320px] items-center overflow-hidden rounded-xl">
+
+                <img
+                    src="{% static 'image/laminate.webp' %}"
+                    alt="Laminate flooring installation"
+                    class="absolute inset-0 h-full w-full object-cover transition duration-700 group-hover:scale-105"
+                >
+
+                <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/45 to-transparent"></div>
+
+                <div class="relative z-10 max-w-[85%] p-6 text-left">
+                    <h3 class="mb-3 text-2xl font-bold text-white font-montserrat">
+                        <span class="text-orange-400">Laminate</span> Flooring
+                    </h3>
+
+                    <p class="text-sm leading-6 text-white/90 font-montserrat">
+                        Laminate flooring installation, wood-look finishes, modern patterns, custom layouts, stair installations, decorative transitions, and precise edge detailing.
+                    </p>
+                </div>
+            </a>
+
+        </div>
+    </div>
+</section>
+<!-- секция с категориями -->
         
-        <section class="showroom">
+        <!-- <section class="showroom">
             <div class="showroom-conteiner">
-                <!--  текст блочный -->
+              
                 <div class="text-service__block">
                     <div class="text-block">
                         <h4>Projects</h4>
@@ -160,13 +433,13 @@
                         <p>Our latest projects</p>
                     </div>
                 </div>
-                <!--  текст блочный -->
+          
     
                 <div class="showroom-conteiner_card">
     
-                    <!--  card -->
+                
                     {% for project in project_item|slice:":4" %}  
-                        <a href="{% url "construction:project_detail" project.slug %}" class="project-href">
+                        <a href="{% url 'construction:project_detail' project.slug %}" class="project-href">
 
                             <div class="showroom-card" style="background-image:url('{{ project.image.url }}');" alt="{{ project.name }}">
                             
@@ -181,11 +454,247 @@
                             </div>
                         </a>    
                     {% endfor %}  
-                    <!--  card -->  
                 </div>
-        </section>
+        </section> -->
         {% include 'include/form/form.html' %}
-        <section>
+
+        <!-- слайдер -->
+<section class="relative h-[400px] w-full overflow-hidden sm:h-[500px] lg:h-[650px]"
+         aria-label="Our projects">
+
+    <!-- Слайды -->
+    <div class="slider-slide absolute inset-0 opacity-100 transition-opacity duration-1000">
+        <img
+            src="{% static 'image/slaider1.webp' %}"
+            alt="Flooring installation project"
+            class="h-full w-full object-cover"
+        >
+    </div>
+
+    <div class="slider-slide absolute inset-0 opacity-0 transition-opacity duration-1000">
+        <img
+            src="{% static 'image/slaider2.webp' %}"
+            alt="Modern flooring project"
+            class="h-full w-full object-cover"
+        >
+    </div>
+
+    <div class="slider-slide absolute inset-0 opacity-0 transition-opacity duration-1000">
+        <img
+            src="{% static 'image/slaider3.webp' %}"
+            alt="Professional flooring services"
+            class="h-full w-full object-cover"
+        >
+    </div>
+     <div class="slider-slide absolute inset-0 opacity-0 transition-opacity duration-1000">
+        <img
+            src="{% static 'image/slaider4.webp' %}"
+            alt="Professional flooring services"
+            class="h-full w-full object-cover"
+        >
+    </div>
+      <div class="slider-slide absolute inset-0 opacity-0 transition-opacity duration-1000">
+        <img
+            src="{% static 'image/slaider5.webp' %}"
+            alt="Professional flooring services"
+            class="h-full w-full object-cover"
+        >
+    </div>
+      <div class="slider-slide absolute inset-0 opacity-0 transition-opacity duration-1000">
+        <img
+            src="{% static 'image/slaider6.webp' %}"
+            alt="Professional flooring services"
+            class="h-full w-full object-cover"
+        >
+    </div>
+      <div class="slider-slide absolute inset-0 opacity-0 transition-opacity duration-1000">
+        <img
+            src="{% static 'image/slaider7.webp' %}"
+            alt="Professional flooring services"
+            class="h-full w-full object-cover"
+        >
+    </div>
+      <div class="slider-slide absolute inset-0 opacity-0 transition-opacity duration-1000">
+        <img
+            src="{% static 'image/slaider8.webp' %}"
+            alt="Professional flooring services"
+            class="h-full w-full object-cover"
+        >
+    </div>
+      <div class="slider-slide absolute inset-0 opacity-0 transition-opacity duration-1000">
+        <img
+            src="{% static 'image/slaider9.webp' %}"
+            alt="Professional flooring services"
+            class="h-full w-full object-cover"
+        >
+    </div>
+     <div class="slider-slide absolute inset-0 opacity-0 transition-opacity duration-1000">
+        <img
+            src="{% static 'image/slaider10.webp' %}"
+            alt="Professional flooring services"
+            class="h-full w-full object-cover"
+        >
+    </div>
+     <div class="slider-slide absolute inset-0 opacity-0 transition-opacity duration-1000">
+        <img
+            src="{% static 'image/slaider11.webp' %}"
+            alt="Professional flooring services"
+            class="h-full w-full object-cover"
+        >
+    </div>
+     <div class="slider-slide absolute inset-0 opacity-0 transition-opacity duration-1000">
+        <img
+            src="{% static 'image/slaider12.webp' %}"
+            alt="Professional flooring services"
+            class="h-full w-full object-cover"
+        >
+    </div>  
+     <!-- Затемнение -->
+    <div class="absolute inset-0 z-[1] bg-black/40"></div>
+
+    <!-- Постоянный текст поверх слайдов -->
+    <div class="absolute inset-0 z-10 flex flex-col items-center justify-center px-5 text-center text-white">
+
+        <h4 class="max-w-4xl font-montserrat text-3xl font-bold sm:text-5xl lg:text-6xl">
+            Transform Your <span class="text-[#FF9500]">Space</span> with <span class="text-[#FF9500] font-normal"><strong style="font-weight: bold;">Expert Flooring</strong></span>
+        </h4>
+
+        <p class="mt-5 max-w-2xl text-bold sm:text-xl font-inter">
+            Professional flooring installation in Toronto.
+            Quality craftsmanship and beautiful results built to last.
+        </p>
+
+         <a href="https://wa.me/14162949948?text=Hello%2C%20I%20am%20a%20flooring%20specialist%20in%20Toronto%2C%20how%20can%20I%20help%3F" target="_blank" aria-label="WhatsApp" 
+            class="mt-8 inline-flex items-center justify-center rounded-full bg-[#FF9500] px-8 py-4 text-sm font-semibold text-white transition duration-300 hover:scale-105 hover:bg-[#E68600] active:scale-95 sm:text-base"
+        >
+            Get a Free Estimate
+        </a>
+
+    </div>
+
+</section>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const slides = document.querySelectorAll('.slider-slide');
+
+    if (slides.length < 2) return;
+
+    let currentSlide = 0;
+
+    setInterval(() => {
+        slides[currentSlide].classList.remove('opacity-100');
+        slides[currentSlide].classList.add('opacity-0');
+
+        currentSlide = (currentSlide + 1) % slides.length;
+
+        slides[currentSlide].classList.remove('opacity-0');
+        slides[currentSlide].classList.add('opacity-100');
+    }, 5000);
+});
+</script>
+<!-- слайдер -->
+
+
+
+<section class="w-full">
+    <div class="grid grid-cols-1 gap-0 sm:grid-cols-2 lg:grid-cols-4">
+
+        <!-- Hardwood -->
+        <a href="{% url 'construction:about' %}"
+           class="group relative flex min-h-[380px] items-end overflow-hidden">
+
+            <img src="{% static 'image/cardabout.webp' %}"
+                 alt="Hardwood flooring installation"
+                 class="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105">
+
+            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/35 to-transparent"></div>
+
+            <div class="relative z-10 p-6 text-left">
+                <h3 class="mb-3 text-2xl font-bold text-white uppercase font-montserrat">
+                    About
+                </h3>
+                <p class="text-sm leading-6 text-white/90">
+                    A professional flooring team serving Toronto and the surrounding areas, specializing in high-quality flooring.
+                </p>
+                <span class="mt-5 inline-block text-2xl text-orange-400 transition-transform duration-300 group-hover:translate-x-2">
+                    →
+                </span>
+            </div>
+        </a>
+
+        <!-- Vinyl -->
+        <a href="{% url 'construction:projects_all' %}"
+           class="group relative flex min-h-[380px] items-end overflow-hidden">
+
+            <img src="{% static 'image/cardproject.webp' %}"
+                 alt="Vinyl flooring installation"
+                 class="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105">
+
+            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/35 to-transparent"></div>
+
+            <div class="relative z-10 p-6 text-left">
+                <h3 class="mb-3 text-2xl font-bold text-white uppercase font-montserrat">
+                    Projects
+                </h3>
+                <p class="text-sm leading-6 text-white/90">
+                    We handle projects of any complexity, with all work carried out by skilled and qualified flooring professionals.
+                </p>
+                <span class="mt-5 inline-block text-2xl text-orange-400 transition-transform duration-300 group-hover:translate-x-2">
+                    →
+                </span>
+            </div>
+        </a>
+
+        <!-- Laminate -->
+        <a href="{% url 'construction:register' %}"
+           class="group relative flex min-h-[380px] items-end overflow-hidden">
+
+            <img src="{% static 'image/cardregister.webp' %}"
+                 alt="Laminate flooring installation"
+                 class="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105">
+
+            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/35 to-transparent"></div>
+
+            <div class="relative z-10 p-6 text-left">
+                <h3 class="mb-3 text-2xl font-bold text-white uppercase font-montserrat">
+                    Reviews
+                </h3>
+                <p class="text-sm leading-6 text-white/90">
+                    If we’ve completed a flooring project for you, we’d love to hear your feedback. Please leave us a review.
+                </p>
+                <span class="mt-5 inline-block text-2xl text-orange-400 transition-transform duration-300 group-hover:translate-x-2">
+                    →
+                </span>
+            </div>
+        </a>
+
+        <!-- Linoleum & Carpet -->
+        <a href="https://wa.me/14162949948?text=Hello%2C%20I%20am%20a%20flooring%20specialist%20in%20Toronto%2C%20how%20can%20I%20help%3F" target="_blank" aria-label="WhatsApp" 
+           class="group relative flex min-h-[380px] items-end overflow-hidden">
+
+            <img src="{% static 'image/cardquest.webp' %}"
+                 alt="Linoleum and carpet flooring"
+                 class="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105">
+
+            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/35 to-transparent"></div>
+
+            <div class="relative z-10 p-6 text-left">
+                <h3 class="mb-3 text-2xl font-bold text-white uppercase font-montserrat">
+                    Questions
+                </h3>
+                <p class="text-sm leading-6 text-white/90">
+                    Our team is always happy to answer your questions and discuss your flooring project with you.
+                </p>
+                <span class="mt-5 inline-block text-2xl text-orange-400 transition-transform duration-300 group-hover:translate-x-2">
+                    →
+                </span>
+            </div>
+        </a>
+
+    </div>
+</section>
+        <!-- <section>
             <div class="text-service__block">
                 <div class="text-block">
                     <h4>Customer Reviews</h4>
@@ -194,23 +703,22 @@
                     <p>Here are collected reviews from our clients</p>
                 </div>
             </div>
-        </section>
+        </section> -->
         <!--  секция главный Showroom -->
-        <section class="reviwes mt-5 mb-4">
+        <!-- <section class="reviwes mt-5 mb-4">
             <div class="container">
                 <div class="row align-items-center justify-content-center gap-2">
                    {% if  reviews %} 
                         {% for review in reviews %}
                                 <div class="card fixed-card card-review" style="width: 300px; height: 300px; border-radius: 30px; border: 1px solid #FF9500;">
                                     <div class="card-body text-left d-flex flex-column justify-content-start align-items-start px-1">
-                                        <!-- Изображение -->
+                                        
                                         <img src="{% static './image/man2.png' %}" class="card-img-top mt-3" alt="Image" style="height: 50px; width: 50px;">
                                     
-                                        <!-- Имя -->
+                                        
                                         <h5 class="card-title-review mt-2 text-left">{{ review.user.username }}</h5>
                                         <img src="{% static './image/stars.png' %}" class="card-img-bottom" alt="Image" style="width: 100px;">
                                     
-                                        <!-- Текст отзыва -->
                                         <p class="card-text-review mt-2">{{ review.content|slice:":150" }}</p>
                                     </div>
                                 </div>
@@ -220,12 +728,8 @@
                     {% endif%}
                 </div>
             </div>
-        </section> 
-    
+        </section>  -->
 
-        
-       
-      
         <script>
             document.addEventListener('DOMContentLoaded', function() {
                 document.querySelectorAll('a[href*="#"]').forEach(anchor => {

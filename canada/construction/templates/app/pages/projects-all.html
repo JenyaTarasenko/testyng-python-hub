@@ -1,12 +1,164 @@
 {% extends "app/base.html" %}
 {% load static %}
 {% block title %}Flooring Installation Toronto{% endblock %}
+
+{% block seo %}
+    <meta name="description" content="Looking for flooring installers in Toronto? ProFloor Installers offers hardwood, vinyl, laminate, linoleum, stairs and custom flooring installation. Contact us for a quote.">
+
+    <meta name="robots" content="index, follow, max-image-preview:large">
+
+    <meta name="author" content="ProFloor Installers">
+    <meta name="theme-color" content="#282E33">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="{{ request.scheme }}://{{ request.get_host }}{{ request.path }}">
+
+    <!-- Open Graph: Facebook, Messenger, social previews -->
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_CA">
+    <meta property="og:site_name" content="ProFloor Installers">
+    <meta property="og:title" content="Flooring Installation Toronto | ProFloor Installers">
+    <meta property="og:description" content="Professional flooring installation in Toronto. Hardwood, vinyl, laminate, linoleum and custom flooring solutions. Contact us for a quote.">
+    <meta property="og:url" content="{{ request.scheme }}://{{ request.get_host }}{{ request.path }}">
+    <meta property="og:image" content="{{ request.scheme }}://{{ request.get_host }}{% static 'image/hardwood.webp' %}">
+    <meta property="og:image:alt" content="Professional flooring installation by ProFloor Installers in Toronto">
+
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Flooring Installation Toronto | ProFloor Installers">
+    <meta name="twitter:description" content="Hardwood, vinyl, laminate and custom flooring installation in Toronto. Request a quote from ProFloor Installers.">
+    <meta name="twitter:image" content="{{ request.scheme }}://{{ request.get_host }}{% static 'image/hardwood.webp' %}">
+
+    <!-- Schema.org: Local business -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HomeAndConstructionBusiness",
+      "@id": "{{ request.scheme }}://{{ request.get_host }}/#business",
+      "name": "ProFloor Installers",
+      "url": "{{ request.scheme }}://{{ request.get_host }}{{ request.path }}",
+      "description": "ProFloor Installers provides flooring installation services in Toronto, Ontario, including hardwood, engineered wood, vinyl, laminate, linoleum, stairs, decorative borders and custom flooring solutions.",
+      "telephone": "+1-416-294-9948",
+      "email": "torontosergey62@gmail.com",
+      "image": "{{ request.scheme }}://{{ request.get_host }}{% static 'image/hardwood.webp' %}",
+      "logo": "{{ request.scheme }}://{{ request.get_host }}{% static 'image/logo-new.svg' %}",
+      "priceRange": "$$",
+      "areaServed": {
+        "@type": "City",
+        "name": "Toronto",
+        "containedInPlace": {
+          "@type": "AdministrativeArea",
+          "name": "Ontario, Canada"
+        }
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+1-416-294-9948",
+        "email": "torontosergey62@gmail.com",
+        "contactType": "customer service",
+        "availableLanguage": ["English"]
+      },
+      "sameAs": [
+        "https://wa.me/14162949948"
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Flooring Installation Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Hardwood Flooring Installation",
+              "description": "Hardwood and engineered wood flooring installation for residential and commercial interiors."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Vinyl Flooring Installation",
+              "description": "Vinyl plank and other vinyl flooring installation."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Laminate Flooring Installation",
+              "description": "Laminate flooring installation and finishing."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Linoleum Flooring Installation"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Stair Flooring Installation",
+              "description": "Flooring installation and finishing for stairs."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Custom Flooring, Patterns and Borders",
+              "description": "Custom flooring designs, decorative borders, chevron and herringbone patterns."
+            }
+          }
+        ]
+      }
+    }
+    </script>
+{% endblock %}
 {% block content %}
         <!--  first-detail -->
-    <section class="detail">
+    <!-- <section class="detail">
         <div class="detail-image__conteiner"></div>
-    </section>
+    </section> -->
       <!--  first-detail -->
+<!-- секция с заголовком  и картинкой -->
+ <section class="relative flex min-h-[350px] items-center justify-center overflow-hidden px-5 py-16 sm:min-h-[450px] lg:min-h-[550px] mt-20">
+
+    <!-- Фоновая картинка -->
+    <img
+        src="{% static 'image/showroom.webp' %}"
+        alt="Professional flooring installation"
+        loading="lazy"
+        class="absolute inset-0 h-full w-full object-cover"
+    >
+
+    <!-- Затемнение фона -->
+    <div class="absolute inset-0 bg-black/50"></div>
+
+    <!-- Текст и кнопка по центру -->
+    <div class="relative z-10 mx-auto max-w-3xl text-center text-white">
+
+        <h1 class="font-montserrat text-3xl font-bold leading-tight sm:text-4xl lg:text-5xl">
+            Our Flooring <span class="text-[#FF9500]">Projects</span><br>Company
+        </h1>
+
+        <h2 class="mx-auto mt-5 max-w-2xl text-sm leading-6 text-white/90 sm:text-lg sm:leading-7 font-inter font-normal">
+            Explore Our Flooring Work Across Toronto and the Surrounding Areas, Showcasing Quality Installation, Custom Designs, and Beautiful Results for Homes and Businesses.
+        </h2>
+
+        <a
+            href="{% url 'construction:index' %}#form"
+            class="mt-8 inline-flex items-center justify-center rounded-full bg-[#FF9500] px-8 py-4 text-sm font-semibold text-white transition duration-300 hover:scale-105 hover:bg-[#E68600] active:scale-95 sm:text-base"
+        >
+             Get a Free Hardwood Flooring Estimate
+        </a>
+
+    </div>
+
+</section>
+<!-- секция с заголовком и картинкой -->
 
     
     
@@ -73,100 +225,69 @@
         </div>
     </section>
     <!-- секция card -->
-    
-    
+    <!-- кнопка по середине -->
+ <section class="items-center justify-center text-center mb-10">
+    <a
+        href="https://wa.me/14162949948?text=Hello%2C%20I%20am%20a%20flooring%20specialist%20in%20Toronto%2C%20how%20can%20I%20help%3F" target="_blank" aria-label="WhatsApp" 
+        class="mt-8 inline-flex items-center justify-center rounded-full bg-[#FF9500] px-8 py-4 text-sm font-semibold text-white transition duration-300 hover:scale-105 hover:bg-[#E68600] active:scale-95 sm:text-base"
+    >
+        Get a Free Quote
+    </a>
+ </section>
+<!-- кнопка по середине -->
 
-    {% comment %} <section class="slider-card"> 
-        <div id="cardSlider" class="carousel slide" data-bs-ride="carousel">
-          <!-- Индикаторы (опционально) -->
-          <div class="carousel-indicators">
-            <button type="button" data-bs-target="#cardSlider" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#cardSlider" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#cardSlider" data-bs-slide-to="2" aria-label="Slide 3"></button>
-          </div>
-      
-          <!-- Слайды -->
-          <div class="carousel-inner">
-            <!-- Первый слайд -->
-            <div class="carousel-item active">
-              <div class="card-conteiner-items">
-                <div class="card-detail__conteiner">
-                  <div class="detail-image_card">
-                    <img src="{% static './image/showroom-3.png' %}" alt="">
-                  </div>
-                  <img src="{% static './image/down-line.png' %}" alt="Круг" class="circle">
-                  <div class="detail-text_card">
-                    <h4>Lorem ipsum dolor sit amet </h4>
-                  </div>
-                  <div class="detail-text_card-description">
-                    <p>Lorem ipsum dolor sit amet consectetur</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-      
-            <!-- Второй слайд -->
-            <div class="carousel-item">
-              <div class="card-conteiner-items">
-                <div class="card-detail__conteiner">
-                  <div class="detail-image_card">
-                    <img src="{% static './image/showroom-3.png' %}" alt="">
-                  </div>
-                  <img src="{% static './image/down-line.png' %}" alt="Круг" class="circle">
-                  <div class="detail-text_card">
-                    <h4>Lorem ipsum dolor sit </h4>
-                  </div>
-                  <div class="detail-text_card-description">
-                    <p>Lorem ipsum dolor sit amet consectetur </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-      
-            <!-- Третий слайд -->
-            <div class="carousel-item">
-              <div class="card-conteiner-items">
-                <div class="card-detail__conteiner">
-                  <div class="detail-image_card">
-                    <img src="{% static './image/showroom-3.png' %}" alt="">
-                  </div>
-                  <img src="{% static './image/down-line.png' %}" alt="Круг" class="circle">
-                  <div class="detail-text_card">
-                    <h4>Lorem ipsum dolor sit amet</h4>
-                  </div>
-                  <div class="detail-text_card-description">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-      
-          <!-- Управляющие кнопки -->
-          <button class="carousel-control-prev" type="button" data-bs-target="#cardSlider" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Предыдущий</span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#cardSlider" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Следующий</span>
-          </button>
-        </div>
-    </section>   {% endcomment %}
-      
+  <!-- секция с заголовком  и картинкой -->
+ <section class="relative flex min-h-[350px] items-center justify-center overflow-hidden px-5 py-16 sm:min-h-[450px] lg:min-h-[550px]">
+
+    <!-- Фоновая картинка -->
+    <img
+        src="{% static 'image/newabout2.webp' %}"
+        alt="Professional flooring installation"
+        loading="lazy"
+        class="absolute inset-0 h-full w-full object-cover"
+    >
+
+    <!-- Затемнение фона -->
+    <div class="absolute inset-0 bg-black/50"></div>
+
+    <!-- Текст и кнопка по центру -->
+    <div class="relative z-10 mx-auto max-w-3xl text-left text-white">
+
+        <h3 class="font-montserrat text-3xl font-bold leading-tight sm:text-4xl lg:text-5xl">
+            Why Choose Our Flooring Team?
+        </h3>
+
+        <h4 class="mt-5 max-w-2xl text-sm leading-6 text-white/90 sm:text-lg sm:leading-7 font-inter font-normal">
+            Competitive Pricing: We offer professional flooring services at fair, transparent prices to suit different needs and budgets.
+
+            Quality Workmanship: Our skilled installers pay close attention to every detail to deliver beautiful, durable floors built to last.
+
+            Reliable Service: We plan each project carefully, respect your time, and work efficiently to meet agreed deadlines.
+
+            Local Experience: Serving Toronto and the surrounding areas, we provide flooring solutions tailored to local homes, businesses, and everyday needs.
+        </h4>
+
+        <a
+            href="{% url 'construction:index' %}#form"
+            class="mt-8 inline-flex items-center justify-center rounded-full bg-[#FF9500] px-8 py-4 text-sm font-semibold text-white transition duration-300 hover:scale-105 hover:bg-[#E68600] active:scale-95 sm:text-base"
+        >
+             Get a Free Hardwood Flooring Estimate
+        </a>
+
+    </div>
+
+</section>
+<!-- секция с заголовком и картинкой -->
+    
   
-    
- 
-
-
    <!-- секция картинка -->
-  <section class="new-detail" >
-    <div class="new-detail_conteiner">
+  <!-- <section class="new-detail" >
+    <div class="new-detail_conteiner"> -->
 
      
 
      <!-- секция картинка -->
-  <section class="new-detail">
+  <!-- <section class="new-detail">
       <div class="new-detail_conteiner new-detail-two">
   
         <div class="detail-text-service__block">
@@ -181,7 +302,7 @@
   <section class="responsive-section">
       <div class="container-section">
         {% for random in random_projects %}
-          <a href="{% url "construction:project_detail" random.slug %}"class="project-href">    
+          <a href="{% url 'construction:project_detail' random.slug %}"class="project-href">    
             <div class="image-container">
                 <img src="{{ random.image.url }}" alt="Image" class="img-fluid"  style="border-radius: 20px 0 20px 0;">
             </div>
@@ -191,8 +312,8 @@
           </a>  
         {% endfor %}    
       </div>
-    </section>
-    <!-- секция картинка -->
+  </section>
+
     <div class="text-service__block">
         <div class="text-block">
             <h4>Why Choose Us in Toronto for Flooring</h4>
@@ -205,6 +326,6 @@
             </div>
         </div>
 
-    </div>
+    </div> -->
 
   {% endblock%} 

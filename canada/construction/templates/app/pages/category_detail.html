@@ -1,6 +1,122 @@
 {% extends "app/base.html" %}
 {% load static %}
 {% block title %}Projects Flooring Installation Toronto{% endblock %}
+
+{% block seo %}
+    <meta name="description" content="Looking for flooring installers in Toronto? ProFloor Installers offers hardwood, vinyl, laminate, linoleum, stairs and custom flooring installation. Contact us for a quote.">
+
+    <meta name="robots" content="index, follow, max-image-preview:large">
+
+    <meta name="author" content="ProFloor Installers">
+    <meta name="theme-color" content="#282E33">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="{{ request.scheme }}://{{ request.get_host }}{{ request.path }}">
+
+    <!-- Open Graph: Facebook, Messenger, social previews -->
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_CA">
+    <meta property="og:site_name" content="ProFloor Installers">
+    <meta property="og:title" content="Flooring Installation Toronto | ProFloor Installers">
+    <meta property="og:description" content="Professional flooring installation in Toronto. Hardwood, vinyl, laminate, linoleum and custom flooring solutions. Contact us for a quote.">
+    <meta property="og:url" content="{{ request.scheme }}://{{ request.get_host }}{{ request.path }}">
+    <meta property="og:image" content="{{ request.scheme }}://{{ request.get_host }}{% static 'image/hardwood.webp' %}">
+    <meta property="og:image:alt" content="Professional flooring installation by ProFloor Installers in Toronto">
+
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Flooring Installation Toronto | ProFloor Installers">
+    <meta name="twitter:description" content="Hardwood, vinyl, laminate and custom flooring installation in Toronto. Request a quote from ProFloor Installers.">
+    <meta name="twitter:image" content="{{ request.scheme }}://{{ request.get_host }}{% static 'image/hardwood.webp' %}">
+
+    <!-- Schema.org: Local business -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HomeAndConstructionBusiness",
+      "@id": "{{ request.scheme }}://{{ request.get_host }}/#business",
+      "name": "ProFloor Installers",
+      "url": "{{ request.scheme }}://{{ request.get_host }}{{ request.path }}",
+      "description": "ProFloor Installers provides flooring installation services in Toronto, Ontario, including hardwood, engineered wood, vinyl, laminate, linoleum, stairs, decorative borders and custom flooring solutions.",
+      "telephone": "+1-416-294-9948",
+      "email": "torontosergey62@gmail.com",
+      "image": "{{ request.scheme }}://{{ request.get_host }}{% static 'image/hardwood.webp' %}",
+      "logo": "{{ request.scheme }}://{{ request.get_host }}{% static 'image/logo-new.svg' %}",
+      "priceRange": "$$",
+      "areaServed": {
+        "@type": "City",
+        "name": "Toronto",
+        "containedInPlace": {
+          "@type": "AdministrativeArea",
+          "name": "Ontario, Canada"
+        }
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+1-416-294-9948",
+        "email": "torontosergey62@gmail.com",
+        "contactType": "customer service",
+        "availableLanguage": ["English"]
+      },
+      "sameAs": [
+        "https://wa.me/14162949948"
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Flooring Installation Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Hardwood Flooring Installation",
+              "description": "Hardwood and engineered wood flooring installation for residential and commercial interiors."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Vinyl Flooring Installation",
+              "description": "Vinyl plank and other vinyl flooring installation."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Laminate Flooring Installation",
+              "description": "Laminate flooring installation and finishing."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Linoleum Flooring Installation"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Stair Flooring Installation",
+              "description": "Flooring installation and finishing for stairs."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Custom Flooring, Patterns and Borders",
+              "description": "Custom flooring designs, decorative borders, chevron and herringbone patterns."
+            }
+          }
+        ]
+      }
+    }
+    </script>
+{% endblock %}
 {% block content %}
 
     <section class="detail">
@@ -41,7 +157,7 @@
         <div class="card-conteiner-items">
             {% if projects %}
                 {% for project in projects %} 
-                    <a href="{% url "construction:project_detail" project.slug %}"class="project-href">
+                    <a href="{% url 'construction:project_detail' project.slug %}"class="project-href">
                         
                         <div class="card-detail__conteiner">
                             <div class="detail-image_card">
@@ -88,7 +204,7 @@
                 </div>
                 <div class="conteiner-desription__text">
                     <div class="new-avatar-text">
-                        <h4>Serhii Bondarenko</h4>
+                        <h4>Sergey Bondarenko</h4>
                         <p>Flooring specialist</p>
                     </div>
                     <div class="new-avatar-description">

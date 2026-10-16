@@ -20,6 +20,12 @@ urlpatterns = [
     path('diverse/', TemplateView.as_view(template_name="app/pages/questions.html"), name="questions"), #для статических страничек сайта diverse
     path('about/', TemplateView.as_view(template_name="app/pages/about.html"), name="about"), #для статических страничек сайта about 
     # path('gallery/', TemplateView.as_view(template_name="app/pages/gallery.html"), name="gallery"),
+    #  страница hardwood для рекламы 
+    path('hardwood-flooring/', views.hardwood, name="hardwood"),
+    #  страница laminate для рекламы 
+    path('laminate-flooring/', views.laminate, name="laminate"),
+    #  страница vinil для рекламы 
+    path('vinyl-flooring/', views.vinil, name="vinyl"),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

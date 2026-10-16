@@ -169,6 +169,7 @@ SITE_URL = 'https://www.pro-floor-installers.com'
 ALLOWED_HOSTS = ['pro-floor-installers.com', 'www.pro-floor-installers.com', '127.0.0.1', 'localhost']
 
 DEBUG = False
+
 SECURE_SSL_REDIRECT = True 
 SESSION_COOKIE_SECURE = True
 CSRF_COOKIE_SECURE = True

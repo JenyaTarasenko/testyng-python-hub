@@ -1,15 +1,131 @@
 {% extends "app/base.html" %}
 {% load static %}
-{% block title %}About the company{% endblock %}
+{% block title %}About ProFloor Installers{% endblock %}
+
+{% block seo %}
+    <meta name="description" content="Looking for flooring installers in Toronto? ProFloor Installers offers hardwood, vinyl, laminate, linoleum, stairs and custom flooring installation. Contact us for a quote.">
+
+    <meta name="robots" content="index, follow, max-image-preview:large">
+
+    <meta name="author" content="ProFloor Installers">
+    <meta name="theme-color" content="#282E33">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="{{ request.scheme }}://{{ request.get_host }}{{ request.path }}">
+
+    <!-- Open Graph: Facebook, Messenger, social previews -->
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_CA">
+    <meta property="og:site_name" content="ProFloor Installers">
+    <meta property="og:title" content="Flooring Installation Toronto | ProFloor Installers">
+    <meta property="og:description" content="Professional flooring installation in Toronto. Hardwood, vinyl, laminate, linoleum and custom flooring solutions. Contact us for a quote.">
+    <meta property="og:url" content="{{ request.scheme }}://{{ request.get_host }}{{ request.path }}">
+    <meta property="og:image" content="{{ request.scheme }}://{{ request.get_host }}{% static 'image/hardwood.webp' %}">
+    <meta property="og:image:alt" content="Professional flooring installation by ProFloor Installers in Toronto">
+
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Flooring Installation Toronto | ProFloor Installers">
+    <meta name="twitter:description" content="Hardwood, vinyl, laminate and custom flooring installation in Toronto. Request a quote from ProFloor Installers.">
+    <meta name="twitter:image" content="{{ request.scheme }}://{{ request.get_host }}{% static 'image/hardwood.webp' %}">
+
+    <!-- Schema.org: Local business -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HomeAndConstructionBusiness",
+      "@id": "{{ request.scheme }}://{{ request.get_host }}/#business",
+      "name": "ProFloor Installers",
+      "url": "{{ request.scheme }}://{{ request.get_host }}{{ request.path }}",
+      "description": "ProFloor Installers provides flooring installation services in Toronto, Ontario, including hardwood, engineered wood, vinyl, laminate, linoleum, stairs, decorative borders and custom flooring solutions.",
+      "telephone": "+1-416-294-9948",
+      "email": "torontosergey62@gmail.com",
+      "image": "{{ request.scheme }}://{{ request.get_host }}{% static 'image/hardwood.webp' %}",
+      "logo": "{{ request.scheme }}://{{ request.get_host }}{% static 'image/logo-new.svg' %}",
+      "priceRange": "$$",
+      "areaServed": {
+        "@type": "City",
+        "name": "Toronto",
+        "containedInPlace": {
+          "@type": "AdministrativeArea",
+          "name": "Ontario, Canada"
+        }
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+1-416-294-9948",
+        "email": "torontosergey62@gmail.com",
+        "contactType": "customer service",
+        "availableLanguage": ["English"]
+      },
+      "sameAs": [
+        "https://wa.me/14162949948"
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Flooring Installation Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Hardwood Flooring Installation",
+              "description": "Hardwood and engineered wood flooring installation for residential and commercial interiors."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Vinyl Flooring Installation",
+              "description": "Vinyl plank and other vinyl flooring installation."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Laminate Flooring Installation",
+              "description": "Laminate flooring installation and finishing."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Linoleum Flooring Installation"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Stair Flooring Installation",
+              "description": "Flooring installation and finishing for stairs."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Custom Flooring, Patterns and Borders",
+              "description": "Custom flooring designs, decorative borders, chevron and herringbone patterns."
+            }
+          }
+        ]
+      }
+    }
+    </script>
+{% endblock %}
 {% block content %}
     <!--  new-page -->
-    <section class="new-page">
+    <!-- <section class="new-page">
         <div class="new-page-image"></div>
-    </section>
+    </section> -->
    
 
     <!--  new-page-text-->
-    <section class="new-description">
+    <!-- <section class="new-description">
         <div class="new-page-text-items">
             <h1>Expert Flooring Solutions for Your Home or Business in Toronto</h1>
         </div>
@@ -66,7 +182,6 @@
                 <div class="col-12 p-3 p-md-4  new-item">
                     <p><strong style="font-weight: 900;">No project is too big or too small—our team thrives on challenges and consistently delivers outstanding results.</p>
                 </div>
-                <!--  текст блочный -->
                 <div class="text-service__block">
                     <div class="text-block">
                         <h4>Why Choose Us?</h4>
@@ -85,20 +200,17 @@
                 <div class="col-12 p-3 p-md-4  new-item">
                     <p><strong style="font-weight: 900;">Local Expertise:</strong> As a Toronto-based organization, we know the local market and climate, providing flooring solutions that stand up to Canadian winters and busy lifestyles.</p>
                 </div>
-                <!--  текст блочный -->
-             
-
             </div>
         </div>
-    </section>
+    </section> -->
 
     <!--  new-page-text-->
 
     <!--  new-page-style -->
-    <section class="new-style">
+    <!-- <section class="new-style">
         <div class="new-style-man">
         
-            <!--  аватарка -->
+          
             <div class="new-style-avatar-conteiner">
 
                 <div class="conteiner-avatar">
@@ -114,7 +226,7 @@
                 </div>
                 <div class="conteiner-desription__text">
                     <div class="new-avatar-text">
-                        <h4>Serhii Bondarenko</h4>
+                        <h4>Sergey Bondarenko</h4>
                         <p>Flooring specialist</p>
                     </div>
                     <div class="new-avatar-description">
@@ -128,7 +240,7 @@
                 <div class="new-substrate"></div>
         
             </div>
-            <!--  аватарка -->
+          
 
             {% comment %} <div class="flag-conteiner">
                 <div class="flag-ukraine"></div>
@@ -139,12 +251,12 @@
         
         </div>
 
-    </section>
+    </section> -->
     <!--  new-page-style -->
 
     <!--  video-content  -->
 
-    <section class="video-content">
+    <!-- <section class="video-content">
         <div class="text-service__block-video">
             <div class="text-block_item-video">
                 <p>areas what we service</p>
@@ -160,8 +272,123 @@
             </iframe>
         </div>
 
-    </section>
+    </section> -->
     <!--  video-content  -->
+
+<!-- секция с заголовком  и картинкой -->
+ <section class="relative flex min-h-[350px] items-center justify-center overflow-hidden px-5 py-16 sm:min-h-[450px] lg:min-h-[550px] mt-20">
+
+    <!-- Фоновая картинка -->
+    <img
+        src="{% static 'image/newabout.webp' %}"
+        alt="Professional flooring installation"
+        loading="lazy"
+        class="absolute inset-0 h-full w-full object-cover"
+    >
+
+    <!-- Затемнение фона -->
+    <div class="absolute inset-0 bg-black/50"></div>
+
+    <!-- Текст и кнопка по центру -->
+    <div class="relative z-10 mx-auto max-w-3xl text-center text-white">
+
+        <h1 class="font-montserrat text-3xl font-bold leading-tight sm:text-4xl lg:text-5xl">
+            About Our <span class="text-[#FF9500]">Flooring</span><br> Company
+        </h1>
+
+        <h2 class="mx-auto mt-5 max-w-2xl text-sm leading-6 text-white/90 sm:text-lg sm:leading-7 font-inter font-normal">
+            A Professional Flooring Team Serving Toronto and the Surrounding Areas, Delivering Quality Workmanship, Reliable Service, and Beautiful Results for Every Project
+        </h2>
+
+        <a
+            href="{% url 'construction:index' %}#form"
+            class="mt-8 inline-flex items-center justify-center rounded-full bg-[#FF9500] px-8 py-4 text-sm font-semibold text-white transition duration-300 hover:scale-105 hover:bg-[#E68600] active:scale-95 sm:text-base"
+        >
+             Get a Free Hardwood Flooring Estimate
+        </a>
+
+    </div>
+
+</section>
+<!-- секция с заголовком и картинкой -->
+
+<section class="py-12">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 p-2">
+
+        <div>
+            <h3 class="text-2xl font-bold mb-4 font-montserrat font-bold">
+                Professional Flooring Services for Homes and Businesses in Toronto
+            </h3>
+            <p class="text-gray-600 leading-7 font-inter font-normal">
+                We are a dedicated team of flooring professionals providing quality flooring installation services throughout Toronto and the surrounding areas. We focus on skilled workmanship, attention to detail, and durable results tailored to each client’s needs. Whether you’re updating your home, renovating a commercial space, or working on a new construction project, we offer a range of flooring solutions designed to complement your space, style, and budget.
+            </p>
+        </div>
+
+        <div>
+            <h4 class="text-2xl font-bold mb-4 font-montserrat font-bold">
+                Our Flooring Expertise
+            </h4>
+            <p class="text-gray-600 leading-7 font-inter font-normal">
+                We provide professional flooring installation across Toronto and the surrounding areas, specializing in hardwood, vinyl, laminate, and linoleum flooring. From classic plank layouts and elegant Chevron and Herringbone patterns to modern vinyl finishes and durable laminate, our skilled team delivers quality workmanship and precise installation for homes and businesses.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<!-- кнопка по середине -->
+ <section class="items-center justify-center text-center mb-10">
+    <a
+        href="https://wa.me/14162949948?text=Hello%2C%20I%20am%20a%20flooring%20specialist%20in%20Toronto%2C%20how%20can%20I%20help%3F" target="_blank" aria-label="WhatsApp" 
+        class="mt-8 inline-flex items-center justify-center rounded-full bg-[#FF9500] px-8 py-4 text-sm font-semibold text-white transition duration-300 hover:scale-105 hover:bg-[#E68600] active:scale-95 sm:text-base"
+    >
+        Get a Free Quote
+    </a>
+ </section>
+<!-- кнопка по середине -->
+
+<!-- секция с заголовком  и картинкой -->
+ <section class="relative flex min-h-[350px] items-center justify-center overflow-hidden px-5 py-16 sm:min-h-[450px] lg:min-h-[550px]">
+
+    <!-- Фоновая картинка -->
+    <img
+        src="{% static 'image/newabout2.webp' %}"
+        alt="Professional flooring installation"
+        loading="lazy"
+        class="absolute inset-0 h-full w-full object-cover"
+    >
+
+    <!-- Затемнение фона -->
+    <div class="absolute inset-0 bg-black/50"></div>
+
+    <!-- Текст и кнопка по центру -->
+    <div class="relative z-10 mx-auto max-w-3xl text-left text-white">
+
+        <h3 class="font-montserrat text-3xl font-bold leading-tight sm:text-4xl lg:text-5xl">
+            Why Choose Our Flooring Team?
+        </h3>
+
+        <h4 class="mt-5 max-w-2xl text-sm leading-6 text-white/90 sm:text-lg sm:leading-7 font-inter font-normal">
+            Competitive Pricing: We offer professional flooring services at fair, transparent prices to suit different needs and budgets.
+
+            Quality Workmanship: Our skilled installers pay close attention to every detail to deliver beautiful, durable floors built to last.
+
+            Reliable Service: We plan each project carefully, respect your time, and work efficiently to meet agreed deadlines.
+
+            Local Experience: Serving Toronto and the surrounding areas, we provide flooring solutions tailored to local homes, businesses, and everyday needs.
+        </h4>
+
+        <a
+            href="{% url 'construction:index' %}#form"
+            class="mt-8 inline-flex items-center justify-center rounded-full bg-[#FF9500] px-8 py-4 text-sm font-semibold text-white transition duration-300 hover:scale-105 hover:bg-[#E68600] active:scale-95 sm:text-base"
+        >
+             Get a Free Hardwood Flooring Estimate
+        </a>
+
+    </div>
+
+</section>
+<!-- секция с заголовком и картинкой -->
 
  {% endblock%} 
     

@@ -12,7 +12,52 @@ from django.contrib.auth.forms import AuthenticationForm
 from .form import UserRegistrationForm, ReviewForm
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login
+from django.core.paginator import Paginator
 
+#страница все паркетные работы
+def hardwood(request):
+
+    # projects_list = Project.objects.filter(category_id=4)
+    # грузит все проекты в разнобой 
+    projects_list = Project.objects.all().order_by('?')
+
+    paginator = Paginator(projects_list, 4)
+    page_number = request.GET.get('page')
+    projects = paginator.get_page(page_number)
+    
+
+    return render(request, "app/pages/hardwood.html", {
+        "projects": projects
+    })
+
+# python manage.py shell
+# from construction.models import Category
+# Category.objects.values("id", "name")
+#страница все виниловые работы
+def vinil(request):
+    # грузит все проекты в разнобой 
+    projects_list = Project.objects.all().order_by('?')
+    paginator = Paginator(projects_list, 4)
+    page_number = request.GET.get('page')
+    projects = paginator.get_page(page_number)
+    
+
+    return render(request, "app/pages/vinyl.html", {
+        "projects": projects
+    })
+
+#страница все ламинатные работы 
+def laminate(request):
+    # грузит все проекты в разнобой 
+    projects_list = Project.objects.all().order_by('?')
+    paginator = Paginator(projects_list, 4)
+    page_number = request.GET.get('page')
+    projects = paginator.get_page(page_number)
+    
+
+    return render(request, "app/pages/laminate.html", {
+        "projects": projects
+    })
 
 # детальная страница категорий 
 def category_detail(request, slug):
@@ -132,11 +177,11 @@ def submith_question(request):
 
     else:
         form = ContactForm()  # Если метод GET, то создаем пустую форму
-        items = Category.objects.all()
-        project_item = Project.objects.all()
-        reviews = Review.objects.order_by('-id')[:3]
+        # items = Category.objects.all()
+        # project_item = Project.objects.all()
+        # reviews = Review.objects.order_by('-id')[:3]
 
-    return render(request, 'app/pages/index.html', {'form': form, 'items':items, 'project_item':project_item, 'reviews': reviews })  # Отправляем форму в шаблон        
+    return render(request, 'app/pages/index.html', {'form': form,})  # Отправляем форму в шаблон        
 
 
 

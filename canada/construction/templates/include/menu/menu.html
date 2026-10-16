@@ -1,7 +1,7 @@
 <!-- верхняя часть навигации -->
 {% load static %}   
 
-    <div class="head_navigator" style="position: absolute; top: 0; left: 0; right: 0; z-index: 100;">
+    <!-- <div class="head_navigator" style="position: absolute; top: 0; left: 0; right: 0; z-index: 100;">
         <div class="top-head"> 
             <div class="conteiner-top-head">
                 <div class="top-header_items d-flex flex-row gap-3">
@@ -17,28 +17,24 @@
                 </div>
             </div>
         </div>
-        <!-- линия навигации -->
         <div class="horizontal-bar"></div>
-        <!-- линия навигации -->
 
        
 
       
         <nav class="navbar navbar-expand-lg" style="background-color:#282E33;">
             <div class="container">
-                <!-- Логотип -->
                 <a class="navbar-brand d-lg-none" href="{% url 'construction:index' %}">
                     <img src="{% static 'image/logo-white.png' %}" alt="logo" style="width: 100px;">
                 </a>
-            
-                <!-- Кнопка бургер-меню -->
+    
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon" style="background-image: url({% static "image/burger-menu.png" %});"></span>
                 </button>
                 
-                <!-- Навигация -->
+         
                 <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav mx-auto"> <!-- Центрируем пункты меню -->
+                    <ul class="navbar-nav mx-auto"> 
                         <li class="nav-item">
                             <a class="nav-link {% if request.path == '/' %}active{% endif %}" href="{% url 'construction:index' %}">Home</a>
                         </li>
@@ -70,5 +66,202 @@
         </nav>
 
        
-    </div>   
+    </div>    -->
+
+
+<div class="fixed inset-x-0 top-0 z-[60] flex h-14 items-center justify-between gap-2 bg-[#282E33] p-2 border-b border-[#FF9500]/20">
+    <a href="{% url 'construction:index' %}#form"
+       class="inline-flex items-center justify-center rounded-3xl bg-[#FF9500]  px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#E68600] transition-colors duration-300 animate-pulse montserrat">
+        Get a Free Quote
+    </a>
+
+  
+    <a href="tel:+14162949948"
+       class="whitespace-nowrap text-xs sm:text-base montserrat font-bold text-[#FF9500] transition hover:text-[#fff]">
+        +1 416 294 9948
+    </a>
+</div>
+
+<style>
+@keyframes pulse-orange {
+    0%, 100% {
+        transform: scale(1);
+        box-shadow:
+            0 0 8px rgba(255, 149, 0, 0.8),
+            0 0 18px rgba(255, 149, 0, 0.5);
+    }
+
+    50% {
+        transform: scale(1.07);
+        box-shadow:
+            0 0 16px rgba(255, 149, 0, 1),
+            0 0 32px rgba(255, 149, 0, 0.8),
+            0 0 45px rgba(255, 149, 0, 0.4);
+    }
+}
+
+.animate-pulse-orange {
+    animation: pulse-orange 1.2s ease-in-out infinite;
+}
+</style>
+
+<nav class="fixed inset-x-0 top-14 z-50 bg-[#282E33]">
+    <div class="px-3">
+        <div class="flex justify-between h-16 items-center">
+
+            <!-- Левый блок: Логотип -->
+            <div class="flex-shrink-0 flex items-center">
+                <a href="#" class="text-2xl font-bold  montserrat"><div class="flex flex-col text-[#FF9500] text-center"><span class="text-[#FF9500] font-bold text-lg">ProFloor</span><span class="text-[#fff] font-light text-xs">installers</span></div></a>
+            </div>
+
+            <!-- Центр: Пункты навигации (десктоп) -->
+            <div class="hidden md:flex flex-1 justify-center items-center relative space-x-6">
+                <a href="{% url 'construction:index' %}" class="relative px-3 py-2 rounded-md text-sm font-normal
+                            text-[#FF9500] font-montserrat
+                            {% if request.resolver_match.url_name == 'product_list' %}after:w-full{% endif %}
+                            hover:text-white transition">
+                    Home
+                </a>
+
+                <a href="{% url 'construction:hardwood' %}" class="scroll-mt-24 relative px-3 py-2 rounded-md text-sm font-normal
+                            text-[#FF9500] font-montserrat
+                            {% if request.resolver_match.url_name == 'product_list' %}after:w-full{% endif %}
+                            hover:text-white transition">
+                    Hardwood
+                </a>
+
+             
+                <a href="{% url 'construction:vinyl' %}" class="scroll-mt-24 relative px-3 py-2 rounded-md text-sm font-normal
+                            text-[#FF9500] font-montserrat
+                            {% if request.resolver_match.url_name == 'product_list' %}after:w-full{% endif %}
+                            hover:text-white transition">
+                    Vinyl
+                </a>
+                <a href="{% url 'construction:laminate' %}" class="relative px-3 py-2 rounded-md text-sm font-normal
+                            text-[#FF9500] font-montserrat
+                            {% if request.resolver_match.url_name == 'product_list' %}after:w-full{% endif %}
+                            hover:text-white transition">
+                    Laminate 
+                </a>
+                <a href="{% url 'construction:about' %}" class="relative px-3 py-2 rounded-md text-sm font-normal
+                            text-[#FF9500] font-montserrat
+                            {% if request.resolver_match.url_name == 'product_list' %}after:w-full{% endif %}
+                            hover:text-white transition">
+                    About
+                </a>
+
+                <!-- дроб даун меню документов -->
+                <div x-data="{ open: false }" class="relative">
+
+                    <!-- КНОПКА -->
+                    <button @mouseenter="open = true" @mouseleave="open = false" class="relative px-3 py-2 rounded-md text-sm font-normal
+                            text-[#FF9500] font-montserrat hover:text-white transition">
+
+                        Account
+                    </button>
+
+                    <!-- ВЫПАДАЮЩЕЕ МЕНЮ -->
+                    <div x-show="open" @mouseenter="open = true" @mouseleave="open = false" x-transition class="absolute left-0 mt-2 w-56 
+                                bg-[#FFCB90] rounded-xl shadow-lg p-2 z-50">
+
+                        <a href="{% url 'construction:register' %}"
+                            class="block px-4 py-2 text-sm text-[#64352A] hover:bg-white rounded-lg transition">
+                            Register
+                        </a>
+                        <a href="{% url 'construction:login' %}"
+                            class="block px-4 py-2 text-sm text-[#64352A] hover:bg-white rounded-lg transition">
+                            Login
+                        </a>
+
+                    </div>
+
+                </div>
+                <!-- дроб даун меню документов -->
+            </div>
+
+            <!-- Правый блок: Корзина -->
+            <div class="flex items-center space-x-4">
+
+                <!-- Корзина  и аутентификация-->
+
+                <!-- Корзина  и аутентификация-->
+                <!-- Правый блок: Корзина -->
+
+                <!-- Бургер меню -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button"
+                        class="relative w-8 h-8 flex flex-col justify-between items-center p-2 text-[#FF9500] focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+
+                        <!-- Линии бургера -->
+                        <span
+                            class="block w-8 h-0.5 bg-current transform transition duration-300 ease-in-out origin-center"></span>
+                        <span
+                            class="block w-8 h-0.5 bg-current transform transition duration-300 ease-in-out origin-center"></span>
+                        <span
+                            class="block w-8 h-0.5 bg-current transform transition duration-300 ease-in-out origin-center"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="mobile-menu" class="hidden md:hidden px-4 py-3 space-y-2 bg-[#282E33] font-montserrat">
+
+        <!-- Главная -->
+        <a href="{% url 'construction:index' %}"
+            class="block px-4 py-3 rounded-lg text-[#FF9500] font-montserrat hover:bg-[#7a4638] transition text-xl font-normal">
+            Home
+        </a>
+
+        <!-- О нас -->
+        <a href="{% url 'construction:hardwood' %}"
+            class="block px-4 py-3 rounded-lg text-[#FF9500] hover:bg-[#7a4638] transition text-xl font-normal">
+            Hardwood
+        </a>
+
+        <!-- Контакты -->
+        <a href="{% url 'construction:vinyl' %}" class="block px-4 py-3 rounded-lg text-[#FF9500] hover:bg-[#7a4638] transition text-xl font-normal">
+            Vinyl
+        </a>
+        <!-- Документы -->
+          <!-- Контакты -->
+        <a href="{% url 'construction:laminate' %}" class="block px-4 py-3 rounded-lg text-[#FF9500] hover:bg-[#7a4638] transition text-xl font-normal">
+             Laminate 
+        </a>
+        <!-- Документы -->
+          <!-- Контакты -->
+        <a href="{% url 'construction:register' %}" class="block px-4 py-3 rounded-lg text-[#FF9500] hover:bg-[#7a4638] transition text-xl font-normal">
+            Register
+        </a>
+        <!-- Документы -->
+          <!-- Контакты -->
+        <a href="{% url 'construction:login' %}" class="block px-4 py-3 rounded-lg text-[#FF9500] hover:bg-[#7a4638] transition text-xl font-normal">
+            Login
+        </a>
+        <!-- Документы -->
+    </div>
+</nav>
+
+<script>
+    // анимация бургера
+    document.addEventListener('DOMContentLoaded', function () {
+        const btn = document.getElementById('mobile-menu-button');
+        const menu = document.getElementById('mobile-menu');
+        const lines = btn.querySelectorAll('span');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+
+            // Анимация линий
+            lines[0].classList.toggle('rotate-45');
+            lines[0].classList.toggle('translate-y-2');
+
+            lines[1].classList.toggle('opacity-0');
+
+            lines[2].classList.toggle('-rotate-45');
+            lines[2].classList.toggle('-translate-y-2');
+        });
+    });
+</script>
+
 
